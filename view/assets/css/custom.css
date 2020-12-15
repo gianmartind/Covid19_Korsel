@@ -1,0 +1,7 @@
+.banner .banner-content h1 {
+    font-size: 52px;
+    line-height: calc(65 / 52);
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 38px;
+  }
