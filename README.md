@@ -12,4 +12,13 @@ Website to track Covid numbers, based on the data from South.
 - 2016730044/Jessica Natalya
 - 6181801067/Arya Jonathan K.
 
+## Table of content
+- [Pendahuluan](#Pendahuluan)
+    - [Tujuan](#Tujuan)
+- [Navigasi Sistem](#Navigasi)
+    - [HTML](#HTML)
+    - [PHP](#PHP)
+    - [MySQL](#mySQL)
+- [License](#license)
+- [Referensi](#referensi)
 
