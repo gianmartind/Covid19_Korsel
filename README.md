@@ -1,5 +1,7 @@
 # Covid19_Korsel
 Website to track Covid numbers, based on the data from South.
+![alt text](https://images.pexels.com/photos/3992933/pexels-photo-3992933.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)
+
 
 ## Author
 - 6181801015/Gian Martin D. 		(Project Manager)
