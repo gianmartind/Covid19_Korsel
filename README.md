@@ -22,3 +22,20 @@ Website to track Covid numbers, based on the data from South.
 - [License](#license)
 - [Referensi](#referensi)
 
+## Pendahuluan
+
+####Tujuan
+
+## Navigasi Sistem
+
+#### HTML
+
+#### PHP
+
+#### MySQL
+
+## License
+
+## Referensi
+
+
