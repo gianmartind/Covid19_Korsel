@@ -1,7 +1,7 @@
 # Covid19_Korsel
 Website to track Covid numbers, based on the data from South.
 <br>
-<img src="https://images.pexels.com/photos/3992933/pexels-photo-3992933.jpeg?cs=srgb&dl=pexels-cdc-3992933.jpg&fm=jpg" width="100">
+<img src="https://images.pexels.com/photos/3992933/pexels-photo-3992933.jpeg?cs=srgb&dl=pexels-cdc-3992933.jpg&fm=jpg" width="500">
 
 
 ## Author
