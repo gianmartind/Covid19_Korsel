@@ -21,7 +21,6 @@ class View{
 	}
 
 	//buat view tanpa parameter
-	
 	public static function createView2($view){
 		ob_start();
 		include 'view/'.$view;
@@ -35,6 +34,18 @@ class View{
 		return $include;
 	}
 
+	//buat view tanpa layout
+	public static function createView3($view, $param){
+		foreach ($param as $key => $value) {
+			$$key = $value;
+		}
 
+		ob_start();
+		include 'view/'.$view;
+		$content = ob_get_contents();
+		ob_end_clean();
+		
+		return $content;
+	}
 }
 ?>
