@@ -1,6 +1,6 @@
 <?php
     $url = $_SERVER['REDIRECT_URL'];
-	$baseURL = '/covid19korsel';
+	$baseURL = '/Covid19_Korsel';
 ?>
 
 <?php
