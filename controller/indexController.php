@@ -13,7 +13,7 @@
 
         public function view_index(){
             $indexData = $this->getIndexData();
-            View::createView3("index.php", [
+            echo View::createView3("index.php", [
                 "indexData" => $indexData
             ]);
         }
