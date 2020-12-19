@@ -11,7 +11,7 @@
             $this->db = new MySQLDB("localhost", "root", "", "covidkorea");
         }
 
-        public function viewIndex(){
+        public function view_index(){
             $indexData = $this->getIndexData();
             viewService::createView3("index.php", [
                 "indexData" => $indexData
