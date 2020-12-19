@@ -1,19 +1,19 @@
 <?php 
-    require_once "controller/mysqlDBService.php"
-    require_once "controller/viewService.php"
-    require_once "model/IndexData.php"
+    require_once "controller/mysqlDBService.php";
+    require_once "controller/viewService.php";;
+    require_once "model/IndexData.php";
 ?>
 <?php
     class IndexController{
         protected $db;
 
         public function __construct(){
-            $this->db = new MySQLDB("localhost", "root", "", "covidkorea");
+            $this->db = new MySQLDB("localhost", "root", "", "testcsv");
         }
 
         public function view_index(){
             $indexData = $this->getIndexData();
-            viewService::createView3("index.php", [
+            View::createView3("index.php", [
                 "indexData" => $indexData
             ]);
         }

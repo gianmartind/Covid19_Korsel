@@ -1,5 +1,5 @@
 <?php
-    class IndexData(){
+    class IndexData{
         public $confirmed;
         public $recovered;
         public $deceased;
