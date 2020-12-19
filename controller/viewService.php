@@ -35,7 +35,7 @@ class View{
 	}
 
 	//buat view tanpa layout
-	public static function createViewNL($view, $param){
+	public static function createView3($view, $param){
 		foreach ($param as $key => $value) {
 			$$key = $value;
 		}
