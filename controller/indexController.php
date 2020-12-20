@@ -13,8 +13,10 @@
 
         public function view_index(){
             $indexData = $this->getIndexData();
+            $provinceDetails = $this->getProvinceDetails();
             echo View::createView3("index.php", [
                 "indexData" => $indexData
+                "provinceDetails" => $provinceDetails;
             ]);
         }
 
@@ -25,6 +27,16 @@
             $query_result = $this->db->executeSelectQuery($query);
             foreach ($query_result as $key => $value) {
                 $result[] = new IndexData($value['total'], $value['released'], $value['deceased'], $value['cntry']);
+            }
+            return $result;
+        }
+
+        public function getProvinceDetails(){
+            $query = "SELECT province, count(*) as total, sum(state='released') as released, sum(state='deceased') as deceased 
+            FROM `patientinfo` GROUP BY province";
+            $query_result = $this->db->executeSelectQuery($query);
+            foreach ($query_result as $key => $value) {
+                $result[] = new ProvinceDetails($value['province'], $value['total'], $value['released'], $value['deceased']);
             }
             return $result;
         }
