@@ -15,8 +15,8 @@
             $indexData = $this->getIndexData();
             $provinceDetails = $this->getProvinceDetails();
             echo View::createView3("index.php", [
-                "indexData" => $indexData
-                "provinceDetails" => $provinceDetails;
+                "indexData" => $indexData,
+                "provinceDetails" => $provinceDetails
             ]);
         }
 
