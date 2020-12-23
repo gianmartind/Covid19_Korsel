@@ -244,6 +244,7 @@ We may release future updates so it will overwrite this file. it's better and sa
   if ($('#coronaTopCountries').length) {
     topCountries();
   }
+
   /*==================================
   11: Corona Data Table
   ====================================*/
@@ -277,6 +278,18 @@ We may release future updates so it will overwrite this file. it's better and sa
   if ($('#coronaDataTable').length) {
     coronaDataTable();
   }
+
+  $("#tableData").DataTable({
+    responsive: true
+  });
+
+  $("#tablePolicy").DataTable({
+    responsive: true
+  });
+
+  $("#tableSearch").DataTable({
+    responsive: true
+  });
   /*==================================
   12: Contact Form
   ====================================*/
