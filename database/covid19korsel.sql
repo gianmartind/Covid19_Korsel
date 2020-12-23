@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 23, 2020 at 05:59 AM
+-- Generation Time: Dec 23, 2020 at 07:43 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -29,9 +29,48 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
-  `username` int(11) NOT NULL,
-  `password` int(11) NOT NULL
+  `username` varchar(24) NOT NULL,
+  `password` varchar(24) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`) VALUES
+(1, 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `coordinates`
+--
+
+CREATE TABLE `coordinates` (
+  `province` varchar(16) DEFAULT NULL,
+  `latitude` decimal(9,7) DEFAULT NULL,
+  `longitude` decimal(10,7) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `coordinates`
+--
+
+INSERT INTO `coordinates` (`province`, `latitude`, `longitude`) VALUES
+('Daegu', '35.8713000', '128.6018000'),
+('Daejeon', '36.3496000', '127.3848000'),
+('Gangwon-do', '37.8850000', '127.7297000'),
+('Gwangju', '35.1595775', '126.8515089'),
+('Gyeonggi-do', '37.2752000', '127.0095000'),
+('Gyeongsangbuk-do', '36.5754000', '128.5058000'),
+('Gyeongsangnam-do', '35.2382000', '128.6925000'),
+('Incheon', '37.4560000', '126.7052000'),
+('Jeju-do', '33.3939924', '126.5626653'),
+('Jeollabuk-do', '35.8198999', '127.1090000'),
+('Jeollanam-do', '34.8159000', '126.4629000'),
+('Sejong', '36.4799999', '127.2890000'),
+('Seoul', '37.5666791', '126.9782914'),
+('Ulsan', '35.5391697', '129.3119136');
 
 -- --------------------------------------------------------
 
