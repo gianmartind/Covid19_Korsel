@@ -11,7 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/img/virus.png" />
+    <link rel="shortcut icon" href="favicon.png" />
 
     <!-- Web Fonts -->
     <link
@@ -29,7 +29,11 @@
 <body>
     <!-- Main Wrapper -->
     <main class="wrapper" id="home">
-        
+        <!-- Preloader -->
+        <div class="preloader w-100 h-100 position-fixed bg-white">
+            <img src="assets/img/logo5.png" alt="">
+        </div>
+        <!-- End Preloader -->
         <!-- Header -->
         <header class="header">
             <div class="header-fixed">
@@ -39,7 +43,7 @@
                             <!-- Logo -->
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo2.png" alt="" />
+                                    <img src="assets/img/logo5.png" alt="" />
                                 </a>
                             </div>
                             <!-- End Logo -->
@@ -57,8 +61,8 @@
                                     <li>
                                         <a href="data.html">Data</a>
                                         <ul class="sub-menu">
-                                            <li><a href="">Data Table</a></li>
-                                            <li><a href="">Data Chart</a></li>
+                                            <li><a href="datatables.html">Data Table</a></li>
+                                            <li><a href="datacharts.html">Data Chart</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -85,7 +89,7 @@
         <!-- End Header -->
 
         <!-- Banner -->
-        <section class="banner d-flex align-items-center justify-content-center" data-bg-img="assets/img/banner4.jpg">
+        <section class="banner d-flex align-items-center justify-content-center" data-bg-img="assets/img/banner5.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -96,8 +100,8 @@
                             </p>
 
                             <div class="banner-btn-group">
-                                <a href="#" class="btn">OVERVIEW DATA</a>
-                                <a href="#" class="btn btn-borderd">ABOUT COVID-19</a>
+                                <a href="data.html" class="btn">OVERVIEW DATA</a>
+                                <a href="about.html" class="btn">ABOUT COVID-19</a>
                             </div>
                         </div>
                         <!-- End Banner Content -->
@@ -130,7 +134,7 @@
                                         <!-- Info -->
                                         <div
                                             class="col-lg-3 col-sm-6 cu_info cu_confirmed d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class="">&nbsp;</h2>
+                                            <h2 class="cuTotal">&nbsp;</h2>
                                             <span>Confirmed</span>
                                         </div>
                                         <!-- End Info -->
@@ -138,7 +142,7 @@
                                         <!-- Info -->
                                         <div
                                             class="col-lg-3 col-sm-6 cu_info cu_recovered d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class="">&nbsp;</h2>
+                                            <h2 class="cuRecovered">&nbsp;</h2>
                                             <span>Recovered</span>
                                         </div>
                                         <!-- End Info -->
@@ -146,7 +150,7 @@
                                         <!-- Info -->
                                         <div
                                             class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class="">&nbsp;</h2>
+                                            <h2 class="cuDeaths">&nbsp;</h2>
                                             <span>Total Deaths</span>
                                         </div>
                                         <!-- End Info -->
@@ -155,8 +159,8 @@
                                         <!-- Info -->
                                         <div
                                             class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class="">&nbsp;</h2>
-                                            <span>Countries</span>
+                                            <h2 class="cuContries">&nbsp;</h2>
+                                            <span>Provinces</span>
                                         </div>
                                         <!-- End Info -->
                                     </div>
@@ -206,10 +210,10 @@
                     <div class="row">
                         <div class="col-lg-4 col-sm-6">
                             <!-- Widget -->
-                            <div class="widget widget-about text-white">
+                            <div class="widget widget-about text-gray">
                                 <!-- Logo -->
                                 <div class="logo mb-30">
-                                    <a href="index.html"><img src="assets/img/logo2.png" alt="" /></a>
+                                    <a href="index.html"><img src="assets/img/logo6.png" alt="" /></a>
                                 </div>
                                 <!-- End Logo -->
                                 <p>Presenting COVID-19 data in South Korea which is presented in the distribution of maps, data charts and data tables.</p>
@@ -220,31 +224,49 @@
                         <div class="col-lg-2 col-sm-6">
                             <!-- Widget -->
                             <div class="widget widget_nav_menu">
-                                <h3 class="widget-title text-white">Quick Links</h3>
-
-                                <ul class="list-unstyled text-white">
-                                    <li><a href="#">Home</a></li>
-                                    <li><a href="#">Data</a></li>
-                                    <li><a href="#">About COVID-19</a></li>
+                                <h3 class="widget-title text-gray">Shortcut Links</h3>
+                                <ul class="list-unstyled text-gray">
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="data.html">Data</a></li>
+                                    <li><a href="about.html">About COVID-19</a></li>
                                 </ul>
                             </div>
                             <!-- End Widget -->
                         </div>
-
-                        <div class="col-lg-3 col-sm-6">
+                        <div class="col-lg-2 col-sm-6">
                             <!-- Widget -->
-                            <div class="widget widget_contacts">
-                                <h3 class="widget-title text-white">Contacts</h3>
-
-                                <ul class="list-unstyled text-white">
-                                    <li>Address: Jalan Ciumbuleuit</li>
-                                    <li>Bandung, Jawa Barat</li>
-                                    <li>Email:info@covidkorea.com</li>
-                                    <li>Phone:+12 3456789</li>
+                            <div class="widget widget_nav_menu">
+                                <h3 class="widget-title text-gray">Frontend Team</h3>
+                                <ul class="list-unstyled text-gray">
+                                    <li><a>Arthur</a></li>
+                                    <li><a>Julyus</a></li>
+                                    <li><a>Yalvi</a></li>
                                 </ul>
                             </div>
                             <!-- End Widget -->
                         </div>
+                        <div class="col-lg-2 col-sm-6">
+                            <!-- Widget -->
+                            <div class="widget widget_nav_menu">
+                                <h3 class="widget-title text-gray">Backend Team</h3>
+                                <ul class="list-unstyled text-gray">
+                                    <li><a>David</a></li>
+                                    <li><a>Gian</a></li>
+                                    <li><a>Jason</a></li>
+                                </ul>
+                            </div>
+                            <!-- End Widget -->
+                        </div>
+                        <div class="col-lg-2 col-sm-6">
+                            <!-- Widget -->
+                            <div class="widget widget_nav_menu">
+                                <h3 class="widget-title text-gray">Documentation Team</h3>
+                                <ul class="list-unstyled text-gray">
+                                    <li><a>Arya</a></li>
+                                    <li><a>Jessica</a></li>
+                                    <li><a>Michael</a></li>
+                                </ul>
+                            </div>
                             <!-- End Widget -->
                         </div>
                     </div>
