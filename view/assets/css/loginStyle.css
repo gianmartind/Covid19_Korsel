@@ -93,7 +93,7 @@
 }
 
 .form-content {
-    background-color: #07002b;
+    background: linear-gradient(to right, rgb(218, 68, 83), rgb(137, 33, 107));
 }
 
 .form-content .form-group {
