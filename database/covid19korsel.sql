@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 12, 2020 at 01:30 PM
+-- Generation Time: Dec 23, 2020 at 05:59 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -20,6 +20,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `testcsv`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `username` int(11) NOT NULL,
+  `password` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -6976,6 +6988,16 @@ INSERT INTO `searchtrend` (`date`, `cold`, `flu`, `pneumonia`, `coronavirus`) VA
 ('2020-06-27', '0.10554', '0.02136', '0.08354', '1.96848'),
 ('2020-06-28', '0.12563', '0.02872', '0.08072', '2.19720'),
 ('2020-06-29', '0.14263', '0.04308', '0.11254', '2.41501');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
