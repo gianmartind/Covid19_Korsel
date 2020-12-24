@@ -29,6 +29,8 @@
 
     <!-- ======= Custom Stylesheet ======= -->
     <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="assets/css/w3.css" />
+
 </head>
 
 <body>
@@ -269,8 +271,90 @@
                             <div>
                                 <br>
                             </div>
-                            <div class="banner-btn-group" style="align-content: center;">
-                                <a href="" class="btn">ADD NEW DATA</a>
+                            <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id01').style.display='block'">
+                                <a class="btn">ADD NEW DATA</a>
+                            </button>
+                            <div id="id01" class="w3-modal">
+                                <div class="w3-modal-content">
+                                  <div class="w3-container modal">
+                                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                    <h2 style="text-align: center;">ADD NEW DATA</h2>
+                                    <form action="" method="post">
+                                        <div class="tg-wrap"><table style="padding: 10px;">
+                                            <thead>
+                                              <tr>
+                                                <td><label for="fname">SEX</label></td>
+                                                <td>
+                                                    <input type="radio" id="male" name="gender" value="male"><label for="male">&nbsp;Male</label>
+                                                    <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
+                                                </td>
+                    
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td><label for="fname">AGE</label></td>
+                                                <td><input type="number" id="age" name="age" min="1" max="120" required></td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">COUNTRY</label></td>
+                                                <td>
+                                                    <select id="country" name="country">
+                                                        <option value="South Korea">South Korea</option>
+                                                        <option value="North Korea">North Korea</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">PROVINCE</label></td>
+                                                <td>
+                                                    <select id="province" name="province">
+                                                        <option value="Gangwon-do">Gangwon-do</option>
+                                                        <option value="Jeju">Jeju</option>
+                                                        <option value="Gyeonggi-do">Gyeonggi-do</option>
+                                                        <option value="Jeollabuk-do">Jeollabuk-do</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">CITY</label></td>
+                                                <td>
+                                                    <select id="city" name="city">
+                                                        <option value="Incheon">Incheon</option>
+                                                        <option value="Seoul">Seoul</option>
+                                                        <option value="Pyongyang">Pyongyang</option>
+                                                        <option value="Busan">Busan</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">INFECTION CASE</label></td>
+                                                <td><input type="text" id="fname" name="fname" required></td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">CONFIRMED DATE</label></td>
+                                                <td>
+                                                    <input type="date" id="date" name="date" required>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">STATE</label></td>
+                                                <td>
+                                                    <select id="state" name="state">
+                                                        <option value="Incheon">Released</option>
+                                                        <option value="Seoul">Deceased</option>
+                                                        <option value="Pyongyang">Isolated</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                            </table></div>
+                                            <button class="banner-btn-group" style="align-content: center;color: white;padding: 5px; margin-top: 10px;">
+                                                <a class="btn">SUBMIT</a>
+                                            </button>
+                                    </form>
+                                  </div>
+                                </div>
                             </div>
                         </div>
                         <!-- End Data Table -->
@@ -399,8 +483,79 @@
                             <div>
                                 <br>
                             </div>
-                            <div class="banner-btn-group" style="align-content: center;">
-                                <a href="" class="btn">ADD NEW DATA</a>
+                            <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id02').style.display='block'">
+                                <a class="btn">ADD NEW DATA</a>
+                            </button>
+                            <div id="id02" class="w3-modal">
+                                <div class="w3-modal-content">
+                                  <div class="w3-container modal">
+                                    <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                    <h2 style="text-align: center;">ADD NEW DATA</h2>
+                                    <form action="" method="post">
+                                        <div class="tg-wrap"><table style="padding: 10px;">
+                                            <thead>
+                                              <tr>
+                                                <td><label for="fname">SEX</label></td>
+                                                <td>
+                                                    <input type="radio" id="male" name="gender" value="male"><label for="male">&nbsp;Male</label>
+                                                    <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
+                                                </td>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td><label for="fname">AGE</label></td>
+                                                <td><input type="number" id="age" name="age" min="1" max="120" required></td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">COUNTRY</label></td>
+                                                <td>
+                                                    <select id="country" name="country">
+                                                        <option value="South Korea">South Korea</option>
+                                                        <option value="North Korea">North Korea</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">PROVINCE</label></td>
+                                                <td>
+                                                    <select id="province" name="province">
+                                                        <option value="Gangwon-do">Gangwon-do</option>
+                                                        <option value="Jeju">Jeju</option>
+                                                        <option value="Gyeonggi-do">Gyeonggi-do</option>
+                                                        <option value="Jeollabuk-do">Jeollabuk-do</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">CITY</label></td>
+                                                <td>
+                                                    <select id="city" name="city">
+                                                        <option value="Incheon">Incheon</option>
+                                                        <option value="Seoul">Seoul</option>
+                                                        <option value="Pyongyang">Pyongyang</option>
+                                                        <option value="Busan">Busan</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">INFECTION CASE</label></td>
+                                                <td><input type="text" id="fname" name="fname" required></td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">CONFIRMED DATE</label></td>
+                                                <td>
+                                                    <input type="date" id="date" name="date" required>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                            </table></div>
+                                            <button class="banner-btn-group" style="align-content: center;color: white;padding: 5px; margin-top: 10px;">
+                                                <a class="btn">SUBMIT</a>
+                                            </button>
+                                    </form>
+                                  </div>
+                                </div>
                             </div>
                         </div>
                         <!-- End Data Table -->
@@ -550,8 +705,68 @@
                             <div>
                                 <br>
                             </div>
-                            <div class="banner-btn-group" style="align-content: center;">
-                                <a href="" class="btn">ADD NEW DATA</a>
+                            <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id03').style.display='block'">
+                                <a class="btn">ADD NEW DATA</a>
+                            </button>
+                            <div id="id03" class="w3-modal">
+                                <div class="w3-modal-content">
+                                  <div class="w3-container modal">
+                                    <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                                    <h2 style="text-align: center;">ADD NEW DATA</h2>
+                                    <form action="" method="post">
+                                        <div class="tg-wrap"><table style="padding: 10px;">
+                                            <thead>
+                                              <tr>
+                                                <td><label for="fname">SEX</label></td>
+                                                <td>
+                                                    <input type="radio" id="male" name="gender" value="male"><label for="male">&nbsp;Male</label>
+                                                    <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
+                                                </td>
+                                              </tr>
+                                            </thead>
+                                            <tbody>
+                                              <tr>
+                                                <td><label for="fname">AGE</label></td>
+                                                <td><input type="number" id="age" name="age" min="1" max="120" required></td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">COUNTRY</label></td>
+                                                <td>
+                                                    <select id="country" name="country">
+                                                        <option value="South Korea">South Korea</option>
+                                                        <option value="North Korea">North Korea</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">PROVINCE</label></td>
+                                                <td>
+                                                    <select id="province" name="province">
+                                                        <option value="Gangwon-do">Gangwon-do</option>
+                                                        <option value="Jeju">Jeju</option>
+                                                        <option value="Gyeonggi-do">Gyeonggi-do</option>
+                                                        <option value="Jeollabuk-do">Jeollabuk-do</option>
+                                                    </select>
+                                                </td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">INFECTION CASE</label></td>
+                                                <td><input type="text" id="fname" name="fname" required></td>
+                                              </tr>
+                                              <tr>
+                                                <td><label for="fname">CONFIRMED DATE</label></td>
+                                                <td>
+                                                    <input type="date" id="date" name="date" required>
+                                                </td>
+                                              </tr>
+                                            </tbody>
+                                            </table></div>
+                                            <button class="banner-btn-group" style="align-content: center;color: white;padding: 5px; margin-top: 10px;" >
+                                                <a class="btn">SUBMIT</a>
+                                            </button>
+                                    </form>
+                                  </div>
+                                </div>
                             </div>
                         </div>
                         <!-- End Data Table -->
