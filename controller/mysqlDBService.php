@@ -68,6 +68,34 @@ class MySQLDB{
 	}
 
 
+		//check baris pada sql
+	public function ngitungbaris($sql){
+		$this ->openConnection();
+		$query_result=$this->db_connection->query($sql);
+		$result=[];
+		if($query_result->num_rows>0){
+			while($row=$query_result->fetch_assoc()){
+				$result[]=$row;
+			}
+		}
+		$hasil=count($result);
+		$this->closeConnection();
+		return $hasil;
+		}
+
+		// check data di database dan lompat ke suatu halaman
+		public function betulgak($check,$loc){
+			if($check==true){
+				header("Location:$loc");
+			}
+			else if($check==false){
+				$message = "Salah Username atau Password";
+				echo "<script type='text/javascript'>alert('$message');history.go(-1);</script>";
+				
+			}
+			
+			}
+}
 	
 }
 ?>
