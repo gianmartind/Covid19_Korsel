@@ -21,6 +21,9 @@
     <!-- ======= Magnific Popup CSS ======= -->
     <link rel="stylesheet" href="view/assets/plugins/magnific-popup/magnific-popup.min.css">
 
+    <!-- ======= Data Tables CSS ======= -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/datatables.min.css" />
+    
     <!-- ======= Main Stylesheet ======= -->
     <link rel="stylesheet" href="view/assets/css/style.css" />
 
@@ -302,6 +305,9 @@
     <!-- ======= jQuery Library ======= -->
     <script src="view/assets/js/jquery.min.js"></script>
 
+    <!-- ======= Data Table JS ======= -->
+    <script src="view/assets/plugins/data-tables/datatables.min.js"></script>
+
     <!-- ======= Magnific Popup JS ======= -->
     <script src="view/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 
@@ -313,6 +319,9 @@
 
     <!-- ======= Main JS ======= -->
     <script src="view/assets/js/main.js"></script>
+
+    <!-- ======= Custom JS ======= -->
+    <script src="view/assets/js/custom.js"></script>
 </body>
 
 </html>
