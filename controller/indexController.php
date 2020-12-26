@@ -1,8 +1,8 @@
 <?php 
-    require_once "controller/mysqlDBService.php";
-    require_once "controller/viewService.php";;
-    require_once "model/IndexData.php";
-    require_once "model/ProvinceDetails.php";
+    require_once "mysqlDBService.php";
+    require_once "viewService.php";
+    require_once "../model/IndexData.php";
+    require_once "../model/ProvinceDetails.php";
 ?>
 <?php
     class IndexController{
