@@ -29,7 +29,6 @@
 
     <!-- ======= Custom Stylesheet ======= -->
     <link rel="stylesheet" href="assets/css/custom.css" />
-    <link rel="stylesheet" href="assets/css/w3.css" />
 
 </head>
 
@@ -99,7 +98,9 @@
                         <div class="banner-content text-left">
                             <h1>WELCOME TO ADMIN PAGE</h1>
                             <div class="banner-btn-group">
-                                <a href="#dataTable" class="btn">DATA TABLES</a>
+                                <a href="#dataTable" class="btn">Patient Info</a>
+                                <a href="#dataTableSearchtrends" class="btn">Search Trends</a>
+                                <a href="#dataTablePolicy" class="btn">Policy</a>
                             </div>
                         </div>
                         <!-- End Banner Content -->
@@ -274,24 +275,25 @@
                             <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id01').style.display='block'">
                                 <a class="btn">ADD NEW DATA</a>
                             </button>
-                            <div id="id01" class="w3-modal">
-                                <div class="w3-modal-content">
-                                  <div class="w3-container modal">
-                                    <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <div id="id01" class="modal">
+                                <div class="modal-content">
+                                  <div class="container">
+                                    <a onclick="document.getElementById('id01').style.display='none'" class="closebtn">&times;</a>
                                     <h2 style="text-align: center;">ADD NEW DATA</h2>
+                                    <br>
                                     <form action="" method="post">
                                         <div class="tg-wrap"><table style="padding: 10px;">
                                             <thead>
-                                              <tr>
+                                              
+                                            </thead>
+                                            <tbody>
+                                              <tr>              
                                                 <td><label for="fname">SEX</label></td>
                                                 <td>
                                                     <input type="radio" id="male" name="gender" value="male"><label for="male">&nbsp;Male</label>
                                                     <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
                                                 </td>
-                    
                                               </tr>
-                                            </thead>
-                                            <tbody>
                                               <tr>
                                                 <td><label for="fname">AGE</label></td>
                                                 <td><input type="number" id="age" name="age" min="1" max="120" required></td>
@@ -486,23 +488,24 @@
                             <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id02').style.display='block'">
                                 <a class="btn">ADD NEW DATA</a>
                             </button>
-                            <div id="id02" class="w3-modal">
-                                <div class="w3-modal-content">
-                                  <div class="w3-container modal">
-                                    <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <div id="id02" class="modal">
+                                <div class="modal-content">
+                                  <div class="container">
+                                    <a onclick="document.getElementById('id02').style.display='none'" class="closebtn">&times;</a>
                                     <h2 style="text-align: center;">ADD NEW DATA</h2>
+                                    <br>
                                     <form action="" method="post">
                                         <div class="tg-wrap"><table style="padding: 10px;">
                                             <thead>
-                                              <tr>
-                                                <td><label for="fname">SEX</label></td>
-                                                <td>
-                                                    <input type="radio" id="male" name="gender" value="male"><label for="male">&nbsp;Male</label>
-                                                    <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
-                                                </td>
-                                              </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>              
+                                                    <td><label for="fname">SEX</label></td>
+                                                    <td>
+                                                        <input type="radio" id="male" name="gender" value="male"><label for="male">&nbsp;Male</label>
+                                                        <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
+                                                    </td>
+                                                  </tr>
                                               <tr>
                                                 <td><label for="fname">AGE</label></td>
                                                 <td><input type="number" id="age" name="age" min="1" max="120" required></td>
@@ -705,26 +708,24 @@
                             <div>
                                 <br>
                             </div>
-                            <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id03').style.display='block'">
-                                <a class="btn">ADD NEW DATA</a>
-                            </button>
-                            <div id="id03" class="w3-modal">
-                                <div class="w3-modal-content">
-                                  <div class="w3-container modal">
-                                    <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                            <div id="id03" class="modal">
+                                <div class="modal-content">
+                                  <div class="container">
+                                    <a onclick="document.getElementById('id03').style.display='none'" class="closebtn">&times;</a>
                                     <h2 style="text-align: center;">ADD NEW DATA</h2>
+                                    <br>
                                     <form action="" method="post">
                                         <div class="tg-wrap"><table style="padding: 10px;">
                                             <thead>
-                                              <tr>
-                                                <td><label for="fname">SEX</label></td>
-                                                <td>
-                                                    <input type="radio" id="male" name="gender" value="male"><label for="male">&nbsp;Male</label>
-                                                    <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
-                                                </td>
-                                              </tr>
                                             </thead>
                                             <tbody>
+                                                <tr>              
+                                                    <td><label for="fname">SEX</label></td>
+                                                    <td>
+                                                        <input type="radio" id="male" name="gender" value="male"><label for="male">&nbsp;Male</label>
+                                                        <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
+                                                    </td>
+                                                  </tr>
                                               <tr>
                                                 <td><label for="fname">AGE</label></td>
                                                 <td><input type="number" id="age" name="age" min="1" max="120" required></td>
@@ -768,6 +769,10 @@
                                   </div>
                                 </div>
                             </div>
+                            <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id03').style.display='block'">
+                                <a class="btn">ADD NEW DATA</a>
+                            </button>
+                            
                         </div>
                         <!-- End Data Table -->
                     </div>
