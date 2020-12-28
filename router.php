@@ -11,10 +11,20 @@
                 $ctrl = new IndexController();
                 $ctrl->view_index();
             break;
-            case $baseURL."/public":
-                require_once "controller/publicController.php";
-                $ctrl = new PublicController();
-                $ctrl->view_public();
+            case $baseURL."/data":
+                require_once "controller/dataController.php";
+                $ctrl = new DataController();
+                $ctrl->view_data();
+            break;
+            case $baseURL."/data/tables":
+                require_once "controller/dataController.php";
+                $ctrl = new DataController();
+                $ctrl->view_tables();
+            break;
+            case $baseURL."/data/charts":
+                require_once "controller/dataController.php";
+                $ctrl = new DataController();
+                $ctrl->view_charts();
             break;
             case $baseURL."/admin":
                 require_once "controller/adminController.php";

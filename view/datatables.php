@@ -1,6 +1,5 @@
 
 <?php 
-       include '../controller/indexController.php';
        $db = new MySQLDB("localhost","root","","testcsv");
 ?>
 
@@ -22,16 +21,16 @@
         rel="stylesheet" />
 
     <!-- ======= Magnific Popup CSS ======= -->
-    <link rel="stylesheet" href="assets/plugins/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" href="../view/assets/plugins/magnific-popup/magnific-popup.min.css">
 
     <!-- ======= Data Tables CSS ======= -->
-    <link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/datatables.min.css" />
+    <link rel="stylesheet" type="text/css" href="../view/assets/plugins/data-tables/datatables.min.css" />
 
     <!-- ======= Main Stylesheet ======= -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="../view/assets/css/style.css" />
 
     <!-- ======= Custom Stylesheet ======= -->
-    <link rel="stylesheet" href="assets/css/custom.css" />
+    <link rel="stylesheet" href="../view/assets/css/custom.css" />
 </head>
 
 <body>
@@ -45,8 +44,8 @@
                         <div class="col-lg-2 col-sm-4 col-5">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="index.html">
-                                    <img src="assets/img/logo5.png" alt="" />
+                                <a href="../index">
+                                    <img src="../view/assets/img/logo5.png" alt="" />
                                 </a>
                             </div>
                             <!-- End Logo -->
@@ -59,13 +58,13 @@
                                 <!-- Nav -->
                                 <ul class="nav align-items-center onPageNav">
                                     <li>
-                                        <a href="index.html">Home</a>
+                                        <a href="../index">Home</a>
                                     </li>
                                     <li>
-                                        <a href="data.html">Data</a>
+                                        <a href="../data">Data</a>
                                         <ul class="sub-menu">
-                                            <li><a href="datatables.php">Data Table</a></li>
-                                            <li><a href="datacharts.php">Data Chart</a></li>
+                                            <li><a href="tables">Data Table</a></li>
+                                            <li><a href="charts">Data Chart</a></li>
                                         </ul>
                                     </li>
                                     <li>
@@ -80,7 +79,7 @@
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
                             <a href="login.html" class="btn header-btn">
                                 <span class="icon d-sm-none">
-                                    <img src="assets/img/icon/sick.svg" class="svg" alt="">
+                                    <img src="../view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
                                 <span class="d-none d-sm-block">LOGIN</span>
                             </a>
@@ -92,7 +91,7 @@
         <!-- End Header -->
 
         <!-- Banner -->
-        <section class="banner d-flex align-items-center justify-content-center" data-bg-img="assets/img/banner3.jpg">
+        <section class="banner d-flex align-items-center justify-content-center" data-bg-img="../view/assets/img/banner3.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -100,8 +99,8 @@
                         <div class="banner-content text-left">
                             <h1>EXPLORE THE DATA OF COVID-19 IN SOUTH KOREA</h1>
                             <div class="banner-btn-group">
-                                <a href="datacharts.php" class="btn">DATA CHARTS</a>
-                                <a href="datatables.php" class="btn">DATA TABLES</a>
+                                <a href="charts" class="btn btn:">DATA CHARTS</a>
+                                <a href="#dataTable" class="btn">DATA TABLES</a>
                             </div>
                         </div>
                         <!-- End Banner Content -->
@@ -322,7 +321,7 @@
         <!-- End Data Table -->
 
         <!-- Footer -->
-        <footer class="footer bg-cover" data-bg-img="assets/img/footer.jpg">
+        <footer class="footer bg-cover" data-bg-img="../view/assets/img/footer.jpg">
             <!-- Footer Top -->
             <div class="container">
                 <!-- Footer Main -->
@@ -333,7 +332,7 @@
                             <div class="widget widget-about text-gray">
                                 <!-- Logo -->
                                 <div class="logo mb-30">
-                                    <a href="index.html"><img src="assets/img/logo6.png" alt="" /></a>
+                                    <a href="index.html"><img src="../view/assets/img/logo6.png" alt="" /></a>
                                 </div>
                                 <!-- End Logo -->
                                 <p>Presenting COVID-19 data in South Korea which is presented in the distribution of maps, data charts and data tables.</p>
@@ -400,23 +399,23 @@
     <!-- End Main Wrapper -->
 
     <!-- ======= jQuery Library ======= -->
-    <script src="assets/js/jquery.min.js"></script>
+    <script src="../view/assets/js/jquery.min.js"></script>
 
     <!-- ======= Data Table JS ======= -->
-    <script src="assets/plugins/data-tables/datatables.min.js"></script>
+    <script src="../view/assets/plugins/data-tables/datatables.min.js"></script>
 
     <!-- ======= Magnific Popup JS ======= -->
-    <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="../view/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- ======= One Page Nav JS ======= -->
-    <script src="assets/plugins/nav/nav.min.js"></script>
+    <script src="../view/assets/plugins/nav/nav.min.js"></script>
 
     <!-- ======= Menu JS ======= -->
-    <script src="assets/js/menu.min.js"></script>
+    <script src="../view/assets/js/menu.min.js"></script>
 
     <!-- ======= Main JS ======= -->
-    <script src="assets/js/main.js"></script>
+    <script src="../view/assets/js/main.js"></script>
 
     <!-- ======= Custom JS ======= -->
-    <script src="assets/js/custom.js"></script>
+    <script src="../view/assets/js/custom.js"></script>
 </body>

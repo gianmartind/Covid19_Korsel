@@ -129,155 +129,18 @@ We may release future updates so it will overwrite this file. it's better and sa
   08: World Update
   ====================================*/
 
-  function worldUpdate() {
-    $.ajax({
-      url: "https://corona.lmao.ninja/v2/all",
-      cache: false,
-      crossDomain: true,
-      headers: {
-        "accept": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      },
-      beforeSend: function beforeSend(xhr) {
-        xhr.withCredentials = true;
-      },
-      success: function success(data) {
-        var cases = data.cases,
-            recovered = data.recovered,
-            deaths = data.deaths,
-            affectedCountries = data.affectedCountries,
-            critical = data.critical,
-            todayCase = data.todayCases,
-            todayDeath = data.todayDeaths;
-        $('.cuTotal').text(cases);
-        $('.cuRecovered').text(recovered);
-        $('.cuDeaths').text(deaths);
-        $('.cuContries').text(affectedCountries);
-        $('.cuCritical').text(critical);
-        $('.cuTodayCases').text(todayCase);
-        $('.cuTodayDeaths').text(todayDeath);
-      }
-    });
-  }
-
-  worldUpdate();
   /*==================================
   09: Country Update
   ====================================*/
 
-  function countryUpdate() {
-    var countryName = $('#coronaCountryUpdate').data("country");
-    $.ajax({
-      url: "https://corona.lmao.ninja/v2/countries/".concat(countryName),
-      cache: false,
-      crossDomain: true,
-      headers: {
-        "accept": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      },
-      beforeSend: function beforeSend(xhr) {
-        xhr.withCredentials = true;
-      },
-      success: function success(data) {
-        var cases = data.cases,
-            recovered = data.recovered,
-            deaths = data.deaths,
-            affectedCountries = data.affectedCountries,
-            critical = data.critical,
-            todayCase = data.todayCases,
-            todayDeath = data.todayDeaths;
-        $('.cuCountryTotal').text(cases);
-        $('.cuCountryRecovered').text(recovered);
-        $('.cuCountryDeaths').text(deaths);
-        $('.cuCountryContries').text(affectedCountries);
-        $('.cuCountryCritical').text(critical);
-        $('.cuCountryTodayCases').text(todayCase);
-        $('.cuCountryTodayDeaths').text(todayDeath);
-      }
-    });
-  }
-
-  if ($('#coronaCountryUpdate').length) {
-    countryUpdate();
-  }
   /*==================================
   10: Top Country Update
   ====================================*/
 
 
-  function topCountries() {
-    var a = $('#coronaTopCountries').data("countries");
-    a = a.split(',').reverse().join();
-    var countries = a;
-    $.ajax({
-      url: "https://corona.lmao.ninja/v2/countries/".concat(countries),
-      cache: false,
-      crossDomain: true,
-      headers: {
-        "accept": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      },
-      beforeSend: function beforeSend(xhr) {
-        xhr.withCredentials = true;
-      },
-      success: function success(data) {
-        $(data).each(function (i, c) {
-          var a = "\n          <div class=\"col-xl col-lg-2 col-md-3 col-sm-4 col-6 mb-30\">\n          <div class=\"single-country d-xl-flex justify-content-center\">\n            <div class=\"flag-wrapper m-auto\">\n              <div class=\"flag-icon w-100 h-100\">\n                <img src=\"".concat(c.countryInfo['flag'], "\" alt=\"").concat(c.country, "\">\n              </div>\n              <span class=\"country-name\">").concat(c.country, "</span>\n            </div>\n\n            <ul class=\"country-info text-center list-unstyled mt-30 mt-xl-0\">\n                <li class=\"cuScTotal bg-warning\">\n                  Total Cases <br/>\n                  ").concat(c.cases, "\n                </li>\n                <li class=\"cuScDeaths bg-denger\">\n                Total Deaths <br/>\n                  ").concat(c.deaths, "\n                </li>\n                <li class=\"cuScrecovered bg-success\">\n                Recovered <br/>\n                  ").concat(c.recovered, "\n                </li>\n            </ul>\n          </div>\n          </div>");
-          $(a).prependTo('#coronaTopCountries');
-          var b = $('.country-info');
-          $(b).each(function () {
-            if ($(window).width() > 1199) {
-              if ($(this).offset().left + $(this).width() > $(window).width()) {
-                $(this).css({
-                  'left': 'auto',
-                  'right': '0',
-                  'transform': 'none'
-                });
-              }
-            }
-          });
-        });
-      }
-    });
-  }
-
-  if ($('#coronaTopCountries').length) {
-    topCountries();
-  }
-
   /*==================================
   11: Corona Data Table
   ====================================*/
-
-
-  function coronaDataTable() {
-    $.ajax({
-      url: "https://corona.lmao.ninja/v2/countries/",
-      cache: false,
-      crossDomain: true,
-      headers: {
-        "accept": "application/json",
-        "Access-Control-Allow-Origin": "*"
-      },
-      beforeSend: function beforeSend(xhr) {
-        xhr.withCredentials = true;
-      },
-      success: function success(data) {
-        var a;
-        $(data).each(function (i, c) {
-          a += "\n          <tr>\n            <td>\n              <div class=\"flag-img\"><img src=\"".concat(c.countryInfo['flag'], "\" alt=\"").concat(c.country, "\"></div>\n            </td>\n            <td>").concat(c.country, "</td>\n            <td>").concat(c.cases, "</td>\n            <td>").concat(c.deaths, "</td>\n            <td>").concat(c.recovered, "</td>\n            <td>").concat(c.critical, "</td>\n          </tr>");
-        });
-        $('#coronaDataTable tbody').prepend(a);
-        $('#coronaDataTable').DataTable({
-          responsive: true
-        });
-      }
-    });
-  }
-
-  if ($('#coronaDataTable').length) {
-    coronaDataTable();
-  }
 
   $("#tableData").DataTable({
     responsive: true

@@ -9,6 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="favicon.png" />
@@ -22,23 +24,18 @@
     <link rel="stylesheet" href="view/assets/plugins/magnific-popup/magnific-popup.min.css">
 
     <!-- ======= Data Tables CSS ======= -->
-    <link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/datatables.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="view/assets/plugins/data-tables/datatables.min.css" />
+
     <!-- ======= Main Stylesheet ======= -->
     <link rel="stylesheet" href="view/assets/css/style.css" />
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <!-- ======= Custom Stylesheet ======= -->
+    <link rel="stylesheet" href="view/assets/css/custom.css" />
 </head>
 
 <body>
     <!-- Main Wrapper -->
-    <main class="wrapper" id="home">
-        <!-- Preloader -->
-        <div class="preloader w-100 h-100 position-fixed bg-white">
-            <img src="view/assets/img/logo5.png" alt="">
-        </div>
-        <!-- End Preloader -->
+    <main class="wrapper" id="data">
         <!-- Header -->
         <header class="header">
             <div class="header-fixed">
@@ -47,7 +44,7 @@
                         <div class="col-lg-2 col-sm-4 col-5">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index">
                                     <img src="view/assets/img/logo5.png" alt="" />
                                 </a>
                             </div>
@@ -94,19 +91,16 @@
         <!-- End Header -->
 
         <!-- Banner -->
-        <section class="banner d-flex align-items-center justify-content-center" data-bg-img="view/assets/img/banner5.jpg">
+        <section class="banner d-flex align-items-center justify-content-center" data-bg-img="view/assets/img/banner3.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <!-- Banner Content -->
                         <div class="banner-content text-left">
-                            <h1>WELCOME TO COVID KOREA</h1>
-                            <p class="">PRESENTING COVID-19 DATA IN SOUTH KOREA, WHICH IS PRESENTED IN DISTRIBUTION OF MAPS, DATA CHARTS AND DATA TABLE.
-                            </p>
-
+                            <h1>EXPLORE THE DATA OF COVID-19 IN SOUTH KOREA</h1>
                             <div class="banner-btn-group">
-                                <a href="data" class="btn">OVERVIEW DATA</a>
-                                <a href="about.html" class="btn">ABOUT COVID-19</a>
+                                <a href="data/charts" class="btn">DATA CHARTS</a>
+                                <a href="data/tables" class="btn">DATA TABLES</a>
                             </div>
                         </div>
                         <!-- End Banner Content -->
@@ -115,115 +109,6 @@
             </div>
         </section>
         <!-- End Banner -->
-
-        <!-- Live Update -->
-        <section>
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="corona-live-update top-50" data-bg-img="view/assets/img/pattern.png">
-                            <div class="row align-items-center no-gutters">
-                                <div class="col-lg">
-                                    <div
-                                        class="live-update-title d-flex flex-column align-items-center justify-content-center p-20">
-                                        <h2 class="d-inline-flex align-items-center">
-                                            <span>Live</span>
-                                            <span>update</span> </h2>
-                                        <span>world update</span>
-                                    </div>
-                                </div>
-
-                                <div class="col-lg">
-                                    <!-- Corona Update -->
-                                    <div id="coronaUpdate" class="corona-update row no-gutters">
-                                        <!-- Info -->
-                                        <div
-                                            class="col-lg-3 col-sm-6 cu_info cu_confirmed d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class=""><?php echo $indexData[0]->getConfirmed()?></h2>
-                                            <span>Confirmed</span>
-                                        </div>
-                                        <!-- End Info -->
-
-                                        <!-- Info -->
-                                        <div
-                                            class="col-lg-3 col-sm-6 cu_info cu_recovered d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class=""><?php echo $indexData[0]->getRecovered()?></h2>
-                                            <span>Recovered</span>
-                                        </div>
-                                        <!-- End Info -->
-
-                                        <!-- Info -->
-                                        <div
-                                            class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class=""><?php echo $indexData[0]->getDeceased()?></h2>
-                                            <span>Total Deaths</span>
-                                        </div>
-                                        <!-- End Info -->
-
-
-                                        <!-- Info -->
-                                        <div
-                                            class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class=""><?php echo $indexData[0]->getCountry()?></h2>
-                                            <span>Provinces</span>
-                                        </div>
-                                        <!-- End Info -->
-                                    </div>
-                                    <!-- End Corona Update -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End Live Update -->
-
-         <!-- Corona Map -->
-         <section class="pt-120 pb-120">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Section Title -->
-                        <div class="section-title text-center mb-75">
-                            <span>South Korea Maps</span>
-                            <h2>Map Distribution</h2>
-                        </div>
-                        <!-- End Section Title -->
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-12">
-                        <!-- Corona World Map -->
-                        <div class="coronaUpdateMapWrapper" id="map" style="height: 600px">
-                            
-                        </div>
-                        <!-- End Corona World Map -->
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <script>
-            var map = L.map('map').setView([36.638392,127.6961188], 7);
-            L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=M01YIcmXM0y9dNU3Uyio', {
-                attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
-            }).addTo(map);
-            <?php
-                foreach ($provinceDetails as $key => $row){
-                    echo "L.circle([".$row->getCoordinate()."], {
-                        color: 'red',
-                        fillOpacity: 0.5,
-                        radius:".($row->getConfirmed()) * (10)." 
-                    }).bindPopup('<b>".$row->getProvince()."</b> <br> Confirmed: ".$row->getConfirmed()." <br> Recovered: ".$row->getRecovered()." <br> Deceased: ".$row->getDeceased()."').addTo(map) ";
-                    echo "\r\n";
-                }
-            ?>
-            
-        </script>
-        <!-- End Corona Map -->
-
         <!-- Footer -->
         <footer class="footer bg-cover" data-bg-img="view/assets/img/footer.jpg">
             <!-- Footer Top -->
@@ -297,8 +182,6 @@
                 <!-- End Footer Main -->
             </div>
             <!-- End Footer Top -->
-        </footer>
-        <!-- End Footer -->
     </main>
     <!-- End Main Wrapper -->
 
