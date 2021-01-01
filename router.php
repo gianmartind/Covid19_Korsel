@@ -26,16 +26,21 @@
                 $ctrl = new DataController();
                 $ctrl->view_charts();
             break;
-            case $baseURL."/admin":
-                require_once "controller/adminController.php";
-                $ctrl = new AdminController();
-                $ctrl->view_admin();    
-            break;
-            case $baseURL."/admin/logout":
+           case $baseURL."/admin/logout":
                 require_once "controller/adminController.php";
                 $ctrl = new AdminController();
                 $ctrl->logout();
             break;
+            case '/Covid19_Korsel/admin/login' :
+                require_once "controller/adminController.php";
+                        $userCtrl2 = new adminController();
+                        echo $userCtrl2->view_login();
+                        break;
+                   case '/Covid19_Korsel/admin' :
+                      require_once "controller/adminController.php";
+                             $userCtrl2 = new adminController();
+                                echo $userCtrl2->view_admin();
+                                 break;
             default:
 				echo '404 Not Found';
 			break;
@@ -43,10 +48,12 @@
     }
     else if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		switch ($url) {
-            case $baseURL."/admin/login":
+              case '/Covid19_Korsel/admin/check' :
                 require_once "controller/adminController.php";
-                $ctrl = new AdminController();
-                $ctrl->login();
+                        $userCtrl2 = new adminController();
+                        echo $userCtrl2->login();
+                        break;
+          
             break;
             case $baseURL."/admin/addPatient":
                 require_once "controller/adminController.php";
