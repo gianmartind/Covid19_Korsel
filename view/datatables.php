@@ -158,9 +158,7 @@
                                 </thead>
                                 <tbody>
                                     <?php 
-                                        $query  = "SELECT * FROM patientinfo";
-                                        $result = $db->executeSelectQuery($query);
-                                        foreach ($result as $key => $row) {
+                                        foreach ($result1 as $key => $row) {
                                             echo "<tr>";
                                             echo "<td>".$row['patient_id']."</td>";
                                             echo "<td>".$row['sex']."</td>";
@@ -228,9 +226,7 @@
                                 </thead>
                                 <tbody>
                                 <?php 
-                                       $query  = "SELECT * FROM searchtrend";
-                                       $result = $db->executeSelectQuery($query);
-                                        foreach ($result as $key => $row) {
+                                        foreach ($result2 as $key => $row) {
                                             echo "<tr>";
                                             echo "<td>".$row['date']."</td>";
                                             echo "<td>".$row['cold']."</td>";
@@ -296,9 +292,8 @@
                                 </thead>
                                 <tbody>
                                 <?php 
-                                       $query  = "SELECT * FROM policy";
-                                       $result = $db->executeSelectQuery($query);
-                                        foreach ($result as $key => $row) {
+                                       
+                                        foreach ($result3 as $key => $row) {
                                             echo "<tr>";
                                             echo "<td>".$row['policy_id']."</td>";
                                             echo "<td>".$row['country']."</td>";

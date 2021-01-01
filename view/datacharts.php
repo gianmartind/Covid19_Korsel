@@ -280,13 +280,9 @@
     </script>
 
     <?php
-            $query  = "SELECT YEAR(date),AVG(cold) as 'avgcold',AVG(flu) as 'avgflu',AVG(pneumonia) as 'avgpneumonia',AVG(coronavirus) as 'avgcovid'
-                        FROM searchtrend 
-                        GROUP BY YEAR(date)";
-            $result = $db->executeSelectQuery($query);
             $index = 0;
             echo "<script>";
-            foreach ($result as $key => $row) {
+            foreach ($result1 as $key => $row) {
                 echo "dataCold[".$index."]=".$row['avgcold'].";";
                 echo "dataFlu[".$index."]=".$row['avgflu'].";";
                 echo "dataPneumonia[".$index."]=".$row['avgpneumonia'].";";
@@ -359,14 +355,10 @@
     </script>
 
     <?php
-            $query  = "SELECT MONTH(date),AVG(coronavirus) as 'avgcovid'
-            FROM searchtrend 
-            WHERE YEAR(date) = 2020
-            GROUP BY YEAR(date),MONTH(date)";
-            $result = $db->executeSelectQuery($query);
+        
             $index = 0;
             echo "<script>";
-            foreach ($result as $key => $row) {
+            foreach ($result2 as $key => $row) {
                 echo "dataCovid2020[".$index."]=".$row['avgcovid'].";";
                 $index++;
             }
@@ -422,11 +414,9 @@
     </script>
 
     <?php
-            $query  = "SELECT age,COUNT(*) as 'jumlah' FROM patientinfo GROUP BY age";
-            $result = $db->executeSelectQuery($query);
             $index = 0;
             echo "<script>";
-            foreach ($result as $key => $row) {
+            foreach ($result3 as $key => $row) {
                 echo "dataAge[".$index."]=".$row['jumlah'].";";
                 $index++;
             }
@@ -475,11 +465,10 @@
     </script>
 
     <?php
-            $query  = "SELECT sex,COUNT(*) as 'jumlah' FROM patientinfo GROUP BY sex";
-            $result = $db->executeSelectQuery($query);
+
             $index = 0;
             echo "<script>";
-            foreach ($result as $key => $row) {
+            foreach ($result4 as $key => $row) {
                 echo "dataGender[".$index."]=".$row['jumlah'].";";
                 $index++;
             }
@@ -519,11 +508,9 @@
     </script>
 
     <?php
-            $query  = "SELECT state,COUNT(*) as 'jumlah' FROM patientinfo GROUP BY state";
-            $result = $db->executeSelectQuery($query);
             $index = 0;
             echo "<script>";
-            foreach ($result as $key => $row) {
+            foreach ($result5 as $key => $row) {
                 echo "dataState[".$index."]=".$row['jumlah'].";";
                 $index++;
             }
