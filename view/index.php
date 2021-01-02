@@ -63,12 +63,12 @@
                                     <li>
                                         <a href="data">Data</a>
                                         <ul class="sub-menu">
-                                            <li><a href="data/tables">Data Table</a></li>
-                                            <li><a href="data/charts">Data Chart</a></li>
+                                            <li><a href="datatables">Data Table</a></li>
+                                            <li><a href="datacharts">Data Chart</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="about.html">About COVID-19</a>
+                                        <a href="about">About COVID-19</a>
                                     </li>
                                 </ul>
                                 <!-- End Nav -->
@@ -77,7 +77,7 @@
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="login" class="btn header-btn">
+                            <a href="admin/login" class="btn header-btn">
                                 <span class="icon d-sm-none">
                                     <img src="view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
@@ -103,7 +103,7 @@
 
                             <div class="banner-btn-group">
                                 <a href="data" class="btn">OVERVIEW DATA</a>
-                                <a href="about.html" class="btn">ABOUT COVID-19</a>
+                                <a href="about" class="btn">ABOUT COVID-19</a>
                             </div>
                         </div>
                         <!-- End Banner Content -->
@@ -241,8 +241,8 @@
                                 <h3 class="widget-title text-gray">Shortcut Links</h3>
                                 <ul class="list-unstyled text-gray">
                                     <li><a href="#home">Home</a></li>
-                                    <li><a href="data.html">Data</a></li>
-                                    <li><a href="about.html">About COVID-19</a></li>
+                                    <li><a href="data">Data</a></li>
+                                    <li><a href="about">About COVID-19</a></li>
                                 </ul>
                             </div>
                             <!-- End Widget -->

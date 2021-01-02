@@ -14,7 +14,7 @@ class DataController
 
     public function view_data()
     {
-        echo View::createView4('data.php');
+        echo View::createView3('data.php',[]);
     }
 
     public function view_tables()

@@ -11,7 +11,7 @@ class trends{
 		$this->date = $date;
 		$this->cold = $cold;
 		$this->flu = $flu;
-		$this->pneumoniaa = $pneumonia;
+		$this->pneumonia = $pneumonia;
 		$this->coronavirus = $coronavirus;
 	}
 
