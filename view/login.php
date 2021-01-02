@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Admin</title>
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/fontawesome-all.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/login.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/loginStyle.css">
+    <link rel="stylesheet" type="text/css" href="../view/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="../view/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="../view/assets/css/login.css">
+    <link rel="stylesheet" type="text/css" href="../view/assets/css/loginStyle.css">
 </head>
 <body>
     <div class="form-body" class="container-fluid">
@@ -17,8 +17,8 @@
                 <div class="info-holder">
                     <h3>SORRY, THIS PAGE IS FOR COVID KOREA ADMINS ONLY!</h3>
                     <p>YOU DON'T HAVE PERMISSION TO LOGIN.</p>
-                    <img src="assets/img/graphic5.svg">
-                    <a href="index.html"><img src="assets/img/logo5.png"></a>
+                    <img src="../view/assets/img/graphic5.svg">
+                    <a href="index.html"><img src="../view/assets/img/logo5.png"></a>
                 </div>
             </div>
             <div class="form-holder">
@@ -27,7 +27,7 @@
                         <div class="website-logo-inside">
                             <a href="index.html">
                                 <div class="logo">
-                                    <img class="logo-size" src="assets/img/logo-light.svg" alt="">
+                                    <img class="logo-size" src="../view/assets/img/logo-light.svg" alt="">
                                 </div>
                             </a>
                         </div>
