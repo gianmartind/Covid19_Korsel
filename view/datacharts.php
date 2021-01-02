@@ -1,10 +1,10 @@
-<?php 
-       $db = new MySQLDB("localhost","root","","testcsv");
+<?php
+$db = new MySQLDB("localhost", "root", "", "testcsv");
 ?>
 
 <head>
     <!-- chart.js Chart -->
-    <script src = "../view/assets/js/Chart.bundle.js"></script>
+    <script src="../view/assets/js/Chart.bundle.js"></script>
     <script src="../view/assets/js/utils.js"></script>
     <!-- Page Title -->
     <title>COVIDKOREA</title>
@@ -18,9 +18,7 @@
     <link rel="shortcut icon" href="favicon.png" />
 
     <!-- Web Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
 
     <!-- ======= Magnific Popup CSS ======= -->
     <link rel="stylesheet" href="../view/assets/plugins/magnific-popup/magnific-popup.min.css">
@@ -37,7 +35,7 @@
         <header class="header">
             <div class="header-fixed">
                 <div class="container">
-                    <div class="row no-gutters align-items-center position-relative"> 
+                    <div class="row no-gutters align-items-center position-relative">
                         <div class="col-lg-2 col-sm-4 col-5">
                             <!-- Logo -->
                             <div class="logo">
@@ -47,11 +45,10 @@
                             </div>
                             <!-- End Logo -->
                         </div>
-                        
+
                         <div class="col-lg-8 col-sm-4 col-4 position-static">
                             <!-- Main Menu -->
-                            <div
-                                class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
+                            <div class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
                                 <!-- Nav -->
                                 <ul class="nav align-items-center onPageNav">
                                     <li>
@@ -66,7 +63,7 @@
                                     </li>
                                     <li>
                                         <a href="about.html">About COVID-19</a>
-                                    </li>                              
+                                    </li>
                                 </ul>
                                 <!-- End Nav -->
                             </div>
@@ -74,7 +71,7 @@
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="login.html" class="btn header-btn">
+                            <a href="login" class="btn header-btn">
                                 <span class="icon d-sm-none">
                                     <img src="../view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
@@ -119,62 +116,62 @@
                 </div>
             </div>
         </div>
-    <div class="main-content" id="datacharts">    
-       <div class="row">
-            <div class="col-lg-6 col-md-12">
-                <div class="box-content">
-                    <h4 class="box-title">Line Chart per Trend</h4>
-                    <canvas id="trendline" width="480" height="320"></canvas>
-                    <!-- /#line-chartjs-chart.chartjs-chart -->
+        <div class="main-content" id="datacharts">
+            <div class="row">
+                <div class="col-lg-6 col-md-12">
+                    <div class="box-content">
+                        <h4 class="box-title">Line Chart per Trend</h4>
+                        <canvas id="trendline" width="480" height="320"></canvas>
+                        <!-- /#line-chartjs-chart.chartjs-chart -->
+                    </div>
+                    <!-- /.box-content -->
                 </div>
-                <!-- /.box-content -->
-            </div>
-            <!-- /.col-lg-6 col-md-12 -->
+                <!-- /.col-lg-6 col-md-12 -->
 
-            <div class="col-lg-6 col-md-12">
-                <div class="box-content">
-                    <h4 class="box-title">Line Chart Covid Year 2020</h4>
-                    <canvas id="trendlinecovid" width="480" height="320"></canvas>
-                    <!-- /#line-chartjs-chart.chartjs-chart -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="box-content">
+                        <h4 class="box-title">Line Chart Covid Year 2020</h4>
+                        <canvas id="trendlinecovid" width="480" height="320"></canvas>
+                        <!-- /#line-chartjs-chart.chartjs-chart -->
+                    </div>
+                    <!-- /.box-content -->
                 </div>
-                <!-- /.box-content -->
-            </div>
-            <!-- /.col-lg-6 col-md-12 -->
+                <!-- /.col-lg-6 col-md-12 -->
 
 
-            <div class="col-lg-6 col-md-12">
-                <div class="box-content">
-                    <h4 class="box-title">Pie Chart Age</h4>
-                    <canvas id="pieage" width="480" height="320"></canvas>
-                    <!-- /#pie-chartjs-chart.chartjs-chart -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="box-content">
+                        <h4 class="box-title">Pie Chart Age</h4>
+                        <canvas id="pieage" width="480" height="320"></canvas>
+                        <!-- /#pie-chartjs-chart.chartjs-chart -->
+                    </div>
+                    <!-- /.box-content -->
                 </div>
-                <!-- /.box-content -->
-            </div>
-            <!-- /.col-lg-6 col-md-12 -->
+                <!-- /.col-lg-6 col-md-12 -->
 
-            <div class="col-lg-6 col-md-12">
-                <div class="box-content">
-                    <h4 class="box-title">Pie Chart Gender</h4>
-                    <canvas id="piegender" width="480" height="320"></canvas>
-                    <!-- /#pie-chartjs-chart.chartjs-chart -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="box-content">
+                        <h4 class="box-title">Pie Chart Gender</h4>
+                        <canvas id="piegender" width="480" height="320"></canvas>
+                        <!-- /#pie-chartjs-chart.chartjs-chart -->
+                    </div>
+                    <!-- /.box-content -->
                 </div>
-                <!-- /.box-content -->
-            </div>
-            <!-- /.col-lg-6 col-md-12 -->
+                <!-- /.col-lg-6 col-md-12 -->
 
-            <div class="col-lg-6 col-md-12">
-                <div class="box-content">
-                    <h4 class="box-title">Pie Chart State</h4>
-                    <canvas id="piecase" width="480" height="320"></canvas>
-                    <!-- /#pie-chartjs-chart.chartjs-chart -->
+                <div class="col-lg-6 col-md-12">
+                    <div class="box-content">
+                        <h4 class="box-title">Pie Chart State</h4>
+                        <canvas id="piecase" width="480" height="320"></canvas>
+                        <!-- /#pie-chartjs-chart.chartjs-chart -->
+                    </div>
+                    <!-- /.box-content -->
                 </div>
-                <!-- /.box-content -->
-            </div>
-            <!-- /.col-lg-6 col-md-12 -->
+                <!-- /.col-lg-6 col-md-12 -->
 
+            </div>
+            <!-- /.row small-spacing -->
         </div>
-        <!-- /.row small-spacing -->    
-    </div>
         <!-- Footer -->
         <footer class="footer bg-cover" data-bg-img="../view/assets/img/footer.jpg">
             <!-- Footer Top -->
@@ -280,72 +277,69 @@
     </script>
 
     <?php
-            $index = 0;
-            echo "<script>";
-            foreach ($result1 as $key => $row) {
-                echo "dataCold[".$index."]=".$row['avgcold'].";";
-                echo "dataFlu[".$index."]=".$row['avgflu'].";";
-                echo "dataPneumonia[".$index."]=".$row['avgpneumonia'].";";
-                echo "dataCovid[".$index."]=".$row['avgcovid'].";";
-                $index++;
-            }
-            echo "</script>";
+    $index = 0;
+    echo "<script>";
+    foreach ($result1 as $key => $row) {
+        echo "dataCold[" . $index . "]=" . $row['avgcold'] . ";";
+        echo "dataFlu[" . $index . "]=" . $row['avgflu'] . ";";
+        echo "dataPneumonia[" . $index . "]=" . $row['avgpneumonia'] . ";";
+        echo "dataCovid[" . $index . "]=" . $row['avgcovid'] . ";";
+        $index++;
+    }
+    echo "</script>";
     ?>
 
     <script>
-
-					
-		var lineChart = {
-            type :'line',
-            data : {
-                datasets : [
-                    {
+        var lineChart = {
+            type: 'line',
+            data: {
+                datasets: [{
                         label: "Cold",
-                        borderColor:window.chartColors.red,
+                        borderColor: window.chartColors.red,
                         data: dataCold,
                     },
                     {
                         label: "Flu",
-                        borderColor:window.chartColors.blue,
+                        borderColor: window.chartColors.blue,
                         data: dataFlu,
                     },
                     {
                         label: "Pneumonia",
-                        borderColor:window.chartColors.yellow,
+                        borderColor: window.chartColors.yellow,
                         data: dataPneumonia,
                     },
                     {
                         label: "Coronavirus",
-                        borderColor:window.chartColors.green,
+                        borderColor: window.chartColors.green,
                         data: dataCovid,
                     },
                 ],
-                labels : ["2016","2017","2018","2019","2020"],
+                labels: ["2016", "2017", "2018", "2019", "2020"],
             },
-            options:{
+            options: {
                 scales: {
-					xAxes: [{
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Year'
-						}
-					}],
-					yAxes: [{
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Search Frequency'
-						}
-					}]
-				},
-				title:{
-					display:true,
-					text:'Search Trends Around the World',
-				},
-				responsive: true,
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Year'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Search Frequency'
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Search Trends Around the World',
+                },
+                responsive: true,
             }
-            
+
         }
     </script>
 
@@ -355,55 +349,51 @@
     </script>
 
     <?php
-        
-            $index = 0;
-            echo "<script>";
-            foreach ($result2 as $key => $row) {
-                echo "dataCovid2020[".$index."]=".$row['avgcovid'].";";
-                $index++;
-            }
-            echo "</script>";
+
+    $index = 0;
+    echo "<script>";
+    foreach ($result2 as $key => $row) {
+        echo "dataCovid2020[" . $index . "]=" . $row['avgcovid'] . ";";
+        $index++;
+    }
+    echo "</script>";
     ?>
 
     <script>
-
-					
-		var lineChart_2 = {
-            type :'line',
-            data : {
-                datasets : [
-                    {
-                        label: "Coronavirus",
-                        borderColor:window.chartColors.green,
-                        data: dataCovid2020,
-                    },
-                ],
-                labels : ["January","Febuary","March","April","May","June"],
+        var lineChart_2 = {
+            type: 'line',
+            data: {
+                datasets: [{
+                    label: "Coronavirus",
+                    borderColor: window.chartColors.green,
+                    data: dataCovid2020,
+                }, ],
+                labels: ["January", "Febuary", "March", "April", "May", "June"],
             },
-            options:{
+            options: {
                 scales: {
-					xAxes: [{
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Month'
-						}
-					}],
-					yAxes: [{
-						display: true,
-						scaleLabel: {
-							display: true,
-							labelString: 'Search Frequency'
-						}
-					}]
-				},
-				title:{
-					display:true,
-					text:'Search Trend Frequency of Covid in 2020',
-				},
-				responsive: true,
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Month'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Search Frequency'
+                        }
+                    }]
+                },
+                title: {
+                    display: true,
+                    text: 'Search Trend Frequency of Covid in 2020',
+                },
+                responsive: true,
             }
-            
+
         }
     </script>
 
@@ -414,133 +404,131 @@
     </script>
 
     <?php
-            $index = 0;
-            echo "<script>";
-            foreach ($result3 as $key => $row) {
-                echo "dataAge[".$index."]=".$row['jumlah'].";";
-                $index++;
-            }
-            echo "</script>";
+    $index = 0;
+    echo "<script>";
+    foreach ($result3 as $key => $row) {
+        echo "dataAge[" . $index . "]=" . $row['jumlah'] . ";";
+        $index++;
+    }
+    echo "</script>";
     ?>
 
     <script>
-		var myDataset_1 = [{
-							data: dataAge,
-							backgroundColor: [
-								window.chartColors.red,
-								window.chartColors.purple,
-								window.chartColors.yellow,
-								window.chartColors.green,
-                                window.chartColors.blue,
-                                window.chartColors.grey,
-                                window.chartColors.orange,
-                                '#000000',
-                                '#ff0000',
-                                '#800000',
-                                '#CCCCFF',
-                                '#DFFF00'
-							],
-						}];
-	    
-		var pieChart_1 = {
-			type :'pie',
-			data:{
-				datasets : myDataset_1,
-				labels:["Unidentified","0s","100s","10s","20s","30s","40s","50s","60s","70s","80s","90s"]
-			},
-			options : {
-				title :{
-					display :true,
-					text:'Patients Number by Age',
-				},
-				responsive : true,
-			}
-		}
+        var myDataset_1 = [{
+            data: dataAge,
+            backgroundColor: [
+                window.chartColors.red,
+                window.chartColors.purple,
+                window.chartColors.yellow,
+                window.chartColors.green,
+                window.chartColors.blue,
+                window.chartColors.grey,
+                window.chartColors.orange,
+                '#000000',
+                '#ff0000',
+                '#800000',
+                '#CCCCFF',
+                '#DFFF00'
+            ],
+        }];
 
+        var pieChart_1 = {
+            type: 'pie',
+            data: {
+                datasets: myDataset_1,
+                labels: ["Unidentified", "0s", "100s", "10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s"]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Patients Number by Age',
+                },
+                responsive: true,
+            }
+        }
     </script>
 
- <!-- ======= pie chart 2 ======= -->
- <script>
+    <!-- ======= pie chart 2 ======= -->
+    <script>
         var dataGender = [];
     </script>
 
     <?php
 
-            $index = 0;
-            echo "<script>";
-            foreach ($result4 as $key => $row) {
-                echo "dataGender[".$index."]=".$row['jumlah'].";";
-                $index++;
-            }
-            echo "</script>";
+    $index = 0;
+    echo "<script>";
+    foreach ($result4 as $key => $row) {
+        echo "dataGender[" . $index . "]=" . $row['jumlah'] . ";";
+        $index++;
+    }
+    echo "</script>";
     ?>
 
     <script>
-		var myDataset_2 = [{
-							data: dataGender,
-							backgroundColor: [
-								window.chartColors.red,
-								window.chartColors.purple,
-								window.chartColors.yellow,
-							],
-						}];
-	    
-		var pieChart_2 = {
-			type :'pie',
-			data:{
-				datasets : myDataset_2,
-				labels:["Unidentified","female","male"]
-			},
-			options : {
-				title :{
-					display :true,
-					text:'Patients Number by Gender',
-				},
-				responsive : true,
-			}
-		}
+        var myDataset_2 = [{
+            data: dataGender,
+            backgroundColor: [
+                window.chartColors.red,
+                window.chartColors.purple,
+                window.chartColors.yellow,
+            ],
+        }];
 
+        var pieChart_2 = {
+            type: 'pie',
+            data: {
+                datasets: myDataset_2,
+                labels: ["Unidentified", "female", "male"]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Patients Number by Gender',
+                },
+                responsive: true,
+            }
+        }
     </script>
 
- <!-- ======= pie chart 3 ======= -->
- <script>
+    <!-- ======= pie chart 3 ======= -->
+    <script>
         var dataState = [];
     </script>
 
     <?php
-            $index = 0;
-            echo "<script>";
-            foreach ($result5 as $key => $row) {
-                echo "dataState[".$index."]=".$row['jumlah'].";";
-                $index++;
-            }
-            echo "</script>";
+    $index = 0;
+    echo "<script>";
+    foreach ($result5 as $key => $row) {
+        echo "dataState[" . $index . "]=" . $row['jumlah'] . ";";
+        $index++;
+    }
+    echo "</script>";
     ?>
 
     <script>
-		var myDataset_3 = [{
-							data: dataState,
-							backgroundColor: [
-								window.chartColors.red,
-								window.chartColors.purple,
-								window.chartColors.yellow,
-							],
-						}];
-	    
-		var pieChart_3 = {
-			type :'pie',
-			data:{
-				datasets : myDataset_3,
-				labels:["deceased","isolated","released"]
-			},
-			options : {
-				title :{
-					display :true,
-					text:'State of Patients',
-				},
-				responsive : true,
-			}
-		}
+        var myDataset_3 = [{
+            data: dataState,
+            backgroundColor: [
+                window.chartColors.red,
+                window.chartColors.purple,
+                window.chartColors.yellow,
+            ],
+        }];
+
+        var pieChart_3 = {
+            type: 'pie',
+            data: {
+                datasets: myDataset_3,
+                labels: ["deceased", "isolated", "released"]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'State of Patients',
+                },
+                responsive: true,
+            }
+        }
 
         window.onload = function() {
             var ctx_1 = document.getElementById("trendline").getContext("2d");
@@ -550,8 +538,8 @@
             var ctx_2 = document.getElementById("pieage").getContext("2d");
             new Chart(ctx_2, pieChart_1);
             var ctx_3 = document.getElementById("piegender").getContext("2d");
-            new Chart(ctx_3,pieChart_2);
+            new Chart(ctx_3, pieChart_2);
             var ctx_4 = document.getElementById("piecase").getContext("2d");
-            new Chart(ctx_4,pieChart_3);
+            new Chart(ctx_4, pieChart_3);
         };
     </script>

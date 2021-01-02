@@ -1,6 +1,5 @@
-
-<?php 
-       $db = new MySQLDB("localhost","root","","testcsv");
+<?php
+$db = new MySQLDB("localhost", "root", "", "testcsv");
 ?>
 
 <head>
@@ -16,9 +15,7 @@
     <link rel="shortcut icon" href="favicon.png" />
 
     <!-- Web Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
 
     <!-- ======= Magnific Popup CSS ======= -->
     <link rel="stylesheet" href="../view/assets/plugins/magnific-popup/magnific-popup.min.css">
@@ -40,7 +37,7 @@
         <header class="header">
             <div class="header-fixed">
                 <div class="container">
-                    <div class="row no-gutters align-items-center position-relative"> 
+                    <div class="row no-gutters align-items-center position-relative">
                         <div class="col-lg-2 col-sm-4 col-5">
                             <!-- Logo -->
                             <div class="logo">
@@ -50,11 +47,10 @@
                             </div>
                             <!-- End Logo -->
                         </div>
-                        
+
                         <div class="col-lg-8 col-sm-4 col-4 position-static">
                             <!-- Main Menu -->
-                            <div
-                                class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
+                            <div class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
                                 <!-- Nav -->
                                 <ul class="nav align-items-center onPageNav">
                                     <li>
@@ -69,7 +65,7 @@
                                     </li>
                                     <li>
                                         <a href="about.html">About COVID-19</a>
-                                    </li>                              
+                                    </li>
                                 </ul>
                                 <!-- End Nav -->
                             </div>
@@ -77,7 +73,7 @@
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="login.html" class="btn header-btn">
+                            <a href="login" class="btn header-btn">
                                 <span class="icon d-sm-none">
                                     <img src="../view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
@@ -139,45 +135,45 @@
                         </div>
                     </div>
                     -->
-                    <div class="col-12">
-                        <!-- Data Table -->
-                        <div class="coronaDataTableWrapper table-responsive">
-                            <table class="coronaDataTable" id="tableData">
-                                <thead>
-                                    <tr>
-                                        <th>Patient ID</th>
-                                        <th>Sex</th>
-                                        <th>Age</th>
-                                        <th>Country</th>
-                                        <th>Province</th>
-                                        <th>City</th>
-                                        <th>Infection Case</th>
-                                        <th>Confirmed Date</th>
-                                        <th>State</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php 
-                                        foreach ($result1 as $key => $row) {
-                                            echo "<tr>";
-                                            echo "<td>".$row['patient_id']."</td>";
-                                            echo "<td>".$row['sex']."</td>";
-                                            echo "<td>".$row['age']."</td>";
-                                            echo "<td>".$row['country']."</td>";
-                                            echo "<td>".$row['province']."</td>";
-                                            echo "<td>".$row['city']."</td>";
-                                            echo "<td>".$row['infection_case']."</td>";
-                                            echo "<td>".$row['confirmed_date']."</td>";
-                                            echo "<td>".$row['state']."</td>";
-                                            echo "</tr>";
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- End Data Table -->
+                <div class="col-12">
+                    <!-- Data Table -->
+                    <div class="coronaDataTableWrapper table-responsive">
+                        <table class="coronaDataTable" id="tableData">
+                            <thead>
+                                <tr>
+                                    <th>Patient ID</th>
+                                    <th>Sex</th>
+                                    <th>Age</th>
+                                    <th>Country</th>
+                                    <th>Province</th>
+                                    <th>City</th>
+                                    <th>Infection Case</th>
+                                    <th>Confirmed Date</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($result1 as $key => $row) {
+                                    echo "<tr>";
+                                    echo "<td>" . $row['patient_id'] . "</td>";
+                                    echo "<td>" . $row['sex'] . "</td>";
+                                    echo "<td>" . $row['age'] . "</td>";
+                                    echo "<td>" . $row['country'] . "</td>";
+                                    echo "<td>" . $row['province'] . "</td>";
+                                    echo "<td>" . $row['city'] . "</td>";
+                                    echo "<td>" . $row['infection_case'] . "</td>";
+                                    echo "<td>" . $row['confirmed_date'] . "</td>";
+                                    echo "<td>" . $row['state'] . "</td>";
+                                    echo "</tr>";
+                                }
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
+                    <!-- End Data Table -->
                 </div>
+            </div>
             </div>
         </section>
         <!-- End Data Table -->
@@ -211,37 +207,37 @@
                         </div>
                     </div>
                     -->
-                    <div class="col-12">
-                        <!-- Data Table -->
-                        <div class="coronaDataTableWrapper table-responsive">
-                            <table class="coronaDataTable" id="tableSearch">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Cold</th>
-                                        <th>Flu</th>
-                                        <th>Pneumonia</th>
-                                        <th>Coronavirus</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php 
-                                        foreach ($result2 as $key => $row) {
-                                            echo "<tr>";
-                                            echo "<td>".$row['date']."</td>";
-                                            echo "<td>".$row['cold']."</td>";
-                                            echo "<td>".$row['flu']."</td>";
-                                            echo "<td>".$row['pneumonia']."</td>";
-                                            echo "<td>".$row['coronavirus']."</td>";
-                                            echo "</tr>";
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- End Data Table -->
+                <div class="col-12">
+                    <!-- Data Table -->
+                    <div class="coronaDataTableWrapper table-responsive">
+                        <table class="coronaDataTable" id="tableSearch">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Cold</th>
+                                    <th>Flu</th>
+                                    <th>Pneumonia</th>
+                                    <th>Coronavirus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+                                foreach ($result2 as $key => $row) {
+                                    echo "<tr>";
+                                    echo "<td>" . $row['date'] . "</td>";
+                                    echo "<td>" . $row['cold'] . "</td>";
+                                    echo "<td>" . $row['flu'] . "</td>";
+                                    echo "<td>" . $row['pneumonia'] . "</td>";
+                                    echo "<td>" . $row['coronavirus'] . "</td>";
+                                    echo "</tr>";
+                                }
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
+                    <!-- End Data Table -->
                 </div>
+            </div>
             </div>
         </section>
         <!-- End Data Table -->
@@ -275,42 +271,42 @@
                         </div>
                     </div>
                     -->
-                    <div class="col-12">
-                        <!-- Data Table -->
-                        <div class="coronaDataTableWrapper table-responsive">
-                            <table class="coronaDataTable" id="tablePolicy">
-                                <thead>
-                                    <tr>
-                                        <th>Policy ID</th>
-                                        <th>Country</th>
-                                        <th>Type</th>
-                                        <th>Gov. Policy</th>
-                                        <th>Detail</th>
-                                        <th>Start date</th>
-                                        <th>End date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                <?php 
-                                       
-                                        foreach ($result3 as $key => $row) {
-                                            echo "<tr>";
-                                            echo "<td>".$row['policy_id']."</td>";
-                                            echo "<td>".$row['country']."</td>";
-                                            echo "<td>".$row['type']."</td>";
-                                            echo "<td>".$row['gov_policy']."</td>";
-                                            echo "<td>".$row['detail']."</td>";
-                                            echo "<td>".$row['start_date']."</td>";
-                                            echo "<td>".$row['end_date']."</td>";
-                                            echo "</tr>";
-                                        }
-                                    ?>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!-- End Data Table -->
+                <div class="col-12">
+                    <!-- Data Table -->
+                    <div class="coronaDataTableWrapper table-responsive">
+                        <table class="coronaDataTable" id="tablePolicy">
+                            <thead>
+                                <tr>
+                                    <th>Policy ID</th>
+                                    <th>Country</th>
+                                    <th>Type</th>
+                                    <th>Gov. Policy</th>
+                                    <th>Detail</th>
+                                    <th>Start date</th>
+                                    <th>End date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php
+
+                                foreach ($result3 as $key => $row) {
+                                    echo "<tr>";
+                                    echo "<td>" . $row['policy_id'] . "</td>";
+                                    echo "<td>" . $row['country'] . "</td>";
+                                    echo "<td>" . $row['type'] . "</td>";
+                                    echo "<td>" . $row['gov_policy'] . "</td>";
+                                    echo "<td>" . $row['detail'] . "</td>";
+                                    echo "<td>" . $row['start_date'] . "</td>";
+                                    echo "<td>" . $row['end_date'] . "</td>";
+                                    echo "</tr>";
+                                }
+                                ?>
+                            </tbody>
+                        </table>
                     </div>
+                    <!-- End Data Table -->
                 </div>
+            </div>
             </div>
         </section>
         <!-- End Data Table -->

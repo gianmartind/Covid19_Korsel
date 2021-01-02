@@ -16,9 +16,7 @@
     <link rel="shortcut icon" href="favicon.png" />
 
     <!-- Web Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
 
     <!-- ======= Magnific Popup CSS ======= -->
     <link rel="stylesheet" href="view/assets/plugins/magnific-popup/magnific-popup.min.css">
@@ -40,7 +38,7 @@
         <header class="header">
             <div class="header-fixed">
                 <div class="container">
-                    <div class="row no-gutters align-items-center position-relative"> 
+                    <div class="row no-gutters align-items-center position-relative">
                         <div class="col-lg-2 col-sm-4 col-5">
                             <!-- Logo -->
                             <div class="logo">
@@ -50,11 +48,10 @@
                             </div>
                             <!-- End Logo -->
                         </div>
-                        
+
                         <div class="col-lg-8 col-sm-4 col-4 position-static">
                             <!-- Main Menu -->
-                            <div
-                                class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
+                            <div class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
                                 <!-- Nav -->
                                 <ul class="nav align-items-center onPageNav">
                                     <li>
@@ -69,7 +66,7 @@
                                     </li>
                                     <li>
                                         <a href="about.html">About COVID-19</a>
-                                    </li>                              
+                                    </li>
                                 </ul>
                                 <!-- End Nav -->
                             </div>
@@ -77,7 +74,7 @@
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="login.html" class="btn header-btn">
+                            <a href="login" class="btn header-btn">
                                 <span class="icon d-sm-none">
                                     <img src="view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
@@ -121,7 +118,7 @@
                             <div class="widget widget-about text-gray">
                                 <!-- Logo -->
                                 <div class="logo mb-30">
-                                    <a href="index.html"><img src="view/assets/img/logo6.png" alt="" /></a>
+                                    <a href="index"><img src="view/assets/img/logo6.png" alt="" /></a>
                                 </div>
                                 <!-- End Logo -->
                                 <p>Presenting COVID-19 data in South Korea which is presented in the distribution of maps, data charts and data tables.</p>

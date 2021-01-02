@@ -14,16 +14,14 @@
     <link rel="shortcut icon" href="favicon.png" />
 
     <!-- Web Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
 
     <!-- ======= Magnific Popup CSS ======= -->
     <link rel="stylesheet" href="view/assets/plugins/magnific-popup/magnific-popup.min.css">
 
     <!-- ======= Data Tables CSS ======= -->
     <link rel="stylesheet" type="text/css" href="assets/plugins/data-tables/datatables.min.css" />
-    
+
     <!-- ======= Main Stylesheet ======= -->
     <link rel="stylesheet" href="view/assets/css/style.css" />
 
@@ -43,21 +41,20 @@
         <header class="header">
             <div class="header-fixed">
                 <div class="container">
-                    <div class="row no-gutters align-items-center position-relative"> 
+                    <div class="row no-gutters align-items-center position-relative">
                         <div class="col-lg-2 col-sm-4 col-5">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index">
                                     <img src="view/assets/img/logo5.png" alt="" />
                                 </a>
                             </div>
                             <!-- End Logo -->
                         </div>
-                        
+
                         <div class="col-lg-8 col-sm-4 col-4 position-static">
                             <!-- Main Menu -->
-                            <div
-                                class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
+                            <div class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
                                 <!-- Nav -->
                                 <ul class="nav align-items-center onPageNav">
                                     <li>
@@ -72,7 +69,7 @@
                                     </li>
                                     <li>
                                         <a href="about.html">About COVID-19</a>
-                                    </li>                              
+                                    </li>
                                 </ul>
                                 <!-- End Nav -->
                             </div>
@@ -80,7 +77,7 @@
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="login.html" class="btn header-btn">
+                            <a href="login" class="btn header-btn">
                                 <span class="icon d-sm-none">
                                     <img src="view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
@@ -124,8 +121,7 @@
                         <div class="corona-live-update top-50" data-bg-img="view/assets/img/pattern.png">
                             <div class="row align-items-center no-gutters">
                                 <div class="col-lg">
-                                    <div
-                                        class="live-update-title d-flex flex-column align-items-center justify-content-center p-20">
+                                    <div class="live-update-title d-flex flex-column align-items-center justify-content-center p-20">
                                         <h2 class="d-inline-flex align-items-center">
                                             <span>Live</span>
                                             <span>update</span> </h2>
@@ -137,34 +133,30 @@
                                     <!-- Corona Update -->
                                     <div id="coronaUpdate" class="corona-update row no-gutters">
                                         <!-- Info -->
-                                        <div
-                                            class="col-lg-3 col-sm-6 cu_info cu_confirmed d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class=""><?php echo $indexData[0]->getConfirmed()?></h2>
+                                        <div class="col-lg-3 col-sm-6 cu_info cu_confirmed d-flex flex-column align-items-center justify-content-center p-30">
+                                            <h2 class=""><?php echo $indexData[0]->getConfirmed() ?></h2>
                                             <span>Confirmed</span>
                                         </div>
                                         <!-- End Info -->
 
                                         <!-- Info -->
-                                        <div
-                                            class="col-lg-3 col-sm-6 cu_info cu_recovered d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class=""><?php echo $indexData[0]->getRecovered()?></h2>
+                                        <div class="col-lg-3 col-sm-6 cu_info cu_recovered d-flex flex-column align-items-center justify-content-center p-30">
+                                            <h2 class=""><?php echo $indexData[0]->getRecovered() ?></h2>
                                             <span>Recovered</span>
                                         </div>
                                         <!-- End Info -->
 
                                         <!-- Info -->
-                                        <div
-                                            class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class=""><?php echo $indexData[0]->getDeceased()?></h2>
+                                        <div class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
+                                            <h2 class=""><?php echo $indexData[0]->getDeceased() ?></h2>
                                             <span>Total Deaths</span>
                                         </div>
                                         <!-- End Info -->
 
 
                                         <!-- Info -->
-                                        <div
-                                            class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class=""><?php echo $indexData[0]->getCountry()?></h2>
+                                        <div class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
+                                            <h2 class=""><?php echo $indexData[0]->getCountry() ?></h2>
                                             <span>Provinces</span>
                                         </div>
                                         <!-- End Info -->
@@ -179,8 +171,8 @@
         </section>
         <!-- End Live Update -->
 
-         <!-- Corona Map -->
-         <section class="pt-120 pb-120">
+        <!-- Corona Map -->
+        <section class="pt-120 pb-120">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -197,7 +189,7 @@
                     <div class="col-12">
                         <!-- Corona World Map -->
                         <div class="coronaUpdateMapWrapper" id="map" style="height: 600px">
-                            
+
                         </div>
                         <!-- End Corona World Map -->
                     </div>
@@ -206,21 +198,20 @@
         </section>
 
         <script>
-            var map = L.map('map').setView([36.638392,127.6961188], 7);
+            var map = L.map('map').setView([36.638392, 127.6961188], 7);
             L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=M01YIcmXM0y9dNU3Uyio', {
                 attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
             }).addTo(map);
             <?php
-                foreach ($provinceDetails as $key => $row){
-                    echo "L.circle([".$row->getCoordinate()."], {
+            foreach ($provinceDetails as $key => $row) {
+                echo "L.circle([" . $row->getCoordinate() . "], {
                         color: 'red',
                         fillOpacity: 0.5,
-                        radius:".($row->getConfirmed()) * (10)." 
-                    }).bindPopup('<b>".$row->getProvince()."</b> <br> Confirmed: ".$row->getConfirmed()." <br> Recovered: ".$row->getRecovered()." <br> Deceased: ".$row->getDeceased()."').addTo(map) ";
-                    echo "\r\n";
-                }
+                        radius:" . ($row->getConfirmed()) * (10) . " 
+                    }).bindPopup('<b>" . $row->getProvince() . "</b> <br> Confirmed: " . $row->getConfirmed() . " <br> Recovered: " . $row->getRecovered() . " <br> Deceased: " . $row->getDeceased() . "').addTo(map) ";
+                echo "\r\n";
+            }
             ?>
-            
         </script>
         <!-- End Corona Map -->
 
