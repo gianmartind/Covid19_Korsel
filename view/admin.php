@@ -57,17 +57,17 @@
                                 <!-- Nav -->
                                 <ul class="nav align-items-center onPageNav">
                                     <li>
-                                        <a href="index.html">Home</a>
+                                        <a href="index">Home</a>
                                     </li>
                                     <li>
-                                        <a href="data.html">Data</a>
+                                        <a href="data">Data</a>
                                         <ul class="sub-menu">
-                                            <li><a href="datatables.html">Data Table</a></li>
-                                            <li><a href="datacharts.html">Data Chart</a></li>
+                                            <li><a href="datatables">Data Table</a></li>
+                                            <li><a href="datacharts">Data Chart</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="about.html">About COVID-19</a>
+                                        <a href="about">About COVID-19</a>
                                     </li>                              
                                 </ul>
                                 <!-- End Nav -->
@@ -76,7 +76,7 @@
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="admin/logout" class="btn header-btn">
+                            <a href="admin/login" class="btn header-btn">
                                 <span class="icon d-sm-none">
                                     <img src="view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
@@ -157,26 +157,21 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
+                                <?php
                                 foreach ($result as $key => $row) {
-		
-                                       
-                                        
-                                        echo "<tr>";
-                                        echo "<td>".$row->getid()."</td>";
-                                        echo "<td>".$row->getsex()."</td>";
-                                        echo "<td>".$row->getage()."</td>";
-                                        echo "<td>".$row->getcountry()."</td>";
-                                        echo "<td>".$row->getprovince()."</td>";
-                                        echo "<td>".$row->getcity()."</td>";
-                                        echo "<td>".$row->getinfection_case()."</td>";
-                                        echo "<td>".$row->getconfirmdate()."</td>";
-                                        echo "<td>".$row-> getstate()."</td>"; 
-                                         echo "</tr>"; 
-                                    
-                                        
-                                    }
-                                    ?>
+                                    echo "<tr>";
+                                    echo "<td>" . $row->getid() . "</td>";
+                                    echo "<td>" . $row->getsex() . "</td>";
+                                    echo "<td>" . $row->getage() . "</td>";
+                                    echo "<td>" . $row->getcountry() . "</td>";
+                                    echo "<td>" . $row->getprovince() . "</td>";
+                                    echo "<td>" . $row->getcity() . "</td>";
+                                    echo "<td>" . $row->getinfection_case() . "</td>";
+                                    echo "<td>" . $row->getconfirmdate() . "</td>";
+                                    echo "<td>" . $row->getstate() . "</td>";
+                                    echo "</tr>";
+                                }
+                                ?>
                                 </tbody>
                             </table>
                             <div>
@@ -206,7 +201,7 @@
                                               </tr>
                                               <tr>
                                                 <td><label for="age">AGE</label></td>
-                                                <td><input type="number" id="age" name="age" min="1" max="120" required></td>
+                                                <td><input type="text" id="age" name="age" required></td>
                                               </tr>
                                               <tr>
                                                 <td><label for="country">COUNTRY</label></td>
@@ -243,12 +238,12 @@
                                               <tr>
                                                 <td><label for="city">CITY</label></td>
                                                 <td>
-                                                    <input type="text" id="country" name="city" required>
+                                                    <input type="text" id="city" name="city" required>
                                                 </td>
                                               </tr>
                                               <tr>
                                                 <td><label for="case">INFECTION CASE</label></td>
-                                                <td><input type="text" id="fname" name="case" required></td>
+                                                <td><input type="text" id="case" name="case" required></td>
                                               </tr>
                                               <tr>
                                                 <td><label for="date">CONFIRMED DATE</label></td>
@@ -260,9 +255,9 @@
                                                 <td><label for="state">STATE</label></td>
                                                 <td>
                                                     <select id="state" name="state">
-                                                        <option value="Incheon">Released</option>
-                                                        <option value="Seoul">Deceased</option>
-                                                        <option value="Pyongyang">Isolated</option>
+                                                        <option value="released">Released</option>
+                                                        <option value="deceased">Deceased</option>
+                                                        <option value="isolated">Isolated</option>
                                                     </select>
                                                 </td>
                                               </tr>
@@ -329,21 +324,15 @@
                                 <tbody>
                                 <?php
                                 foreach ($result2 as $key => $row) {
-		
-                                       
-                                        
-                                        echo "<tr>";
-                                        echo "<td>".$row->getdate()."</td>";
-                                        echo "<td>".$row->getcold()."</td>";
-                                        echo "<td>".$row->getflu()."</td>";
-                                        echo "<td>".$row->getpneumonia()."</td>";
-                                        echo "<td>".$row->getcoronavirus()."</td>";
-                                      
-                                         echo "</tr>"; 
-                                    
-                                        
-                                    }
-                                    ?>
+                                    echo "<tr>";
+                                    echo "<td>" . $row->getdate() . "</td>";
+                                    echo "<td>" . $row->getcold() . "</td>";
+                                    echo "<td>" . $row->getflu() . "</td>";
+                                    echo "<td>" . $row->getpneumonia() . "</td>";
+                                    echo "<td>" . $row->getcoronavirus() . "</td>";
+                                    echo "</tr>";
+                                }
+                                ?>
                                 </tbody>
                             </table>
                             <div>
@@ -371,19 +360,19 @@
                                                   </tr>
                                               <tr>
                                                 <td><label for="cold">COLD</label></td>
-                                                <td><input type="number" id="cold" name="cold" min="0" max="1" required></td>
+                                                <td><input type="number" id="cold" name="cold" min="0" max="1" step="0.00001" required></td>
                                               </tr>
                                               <tr>
                                                 <td><label for="flu">FLU</label></td>
-                                                <td><input type="number" id="flu" name="flue" min="0" max="1" required></td>
+                                                <td><input type="number" id="flu" name="flue" min="0" max="1" step="0.00001" required></td>
                                               </tr>
                                               <tr>
                                                 <td><label for="pneumonia">Pneumonia</label></td>
-                                                <td><input type="number" id="pneumonia" name="pneumonia" min="0" max="1" required></td>
+                                                <td><input type="number" id="pneumonia" name="pneumonia" min="0" max="1" step="0.00001" required></td>
                                               </tr>
                                               <tr>
                                                 <td><label for="coronavirus">Coronavirus</label></td>
-                                                <td><input type="number" id="coronavirus" name="coronavirus" min="0" max="1" required></td>
+                                                <td><input type="number" id="coronavirus" name="coronavirus" min="0" max="1" step="0.00001" required></td>
                                               </tr>
                                             </tbody>
                                             </table></div>
@@ -403,7 +392,7 @@
         <!-- End Data Table -->
 
         <!-- Data Table -->
-        <section id="admin/dataTablePolicy" class="pb-120">
+        <section id="dataTablePolicy" class="pb-120">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -447,25 +436,19 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php
-                                     foreach ($result3 as $key => $row) {
-		
-                                       
-                                        
-                                        echo "<tr>";
-                                        echo "<td>".$row->getpolicyid()."</td>";
-                                        echo "<td>".$row->getpolicycountry()."</td>";
-                                        echo "<td>".$row-> gettype()."</td>";
-                                        echo "<td>".$row->getgovpolicy()."</td>";
-                                        echo "<td>".$row->getdetail()."</td>";
-                                        echo "<td>".$row->getstartdate()."</td>";
-                                        echo "<td>".$row-> getenddate()."</td>";
-                                         echo "</tr>"; 
-                                    
-                                        
-                                    }
-                                    
-                                    ?>
+                                <?php
+                                foreach ($result3 as $key => $row) {
+                                    echo "<tr>";
+                                    echo "<td>" . $row->getpolicyid() . "</td>";
+                                    echo "<td>" . $row->getcountry() . "</td>";
+                                    echo "<td>" . $row->gettype() . "</td>";
+                                    echo "<td>" . $row->getgovpolicy() . "</td>";
+                                    echo "<td>" . $row->getdetail() . "</td>";
+                                    echo "<td>" . $row->getstartdate() . "</td>";
+                                    echo "<td>" . $row->getenddate() . "</td>";
+                                    echo "</tr>";
+                                }
+                                ?>
                                 </tbody>
                             </table>
                             <div>
@@ -562,7 +545,7 @@
                             <div class="widget widget-about text-gray">
                                 <!-- Logo -->
                                 <div class="logo mb-30">
-                                    <a href="index.html"><img src="view/assets/img/logo6.png" alt="" /></a>
+                                    <a href="index"><img src="view/assets/img/logo6.png" alt="" /></a>
                                 </div>
                                 <!-- End Logo -->
                                 <p>Presenting COVID-19 data in South Korea which is presented in the distribution of maps, data charts and data tables.</p>
@@ -575,9 +558,9 @@
                             <div class="widget widget_nav_menu">
                                 <h3 class="widget-title text-gray">Shortcut Links</h3>
                                 <ul class="list-unstyled text-gray">
-                                    <li><a href="#home">Home</a></li>
-                                    <li><a href="data.html">Data</a></li>
-                                    <li><a href="about.html">About COVID-19</a></li>
+                                    <li><a href="index">Home</a></li>
+                                    <li><a href="data">Data</a></li>
+                                    <li><a href="about">About COVID-19</a></li>
                                 </ul>
                             </div>
                             <!-- End Widget -->

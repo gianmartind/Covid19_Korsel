@@ -24,6 +24,10 @@ class IndexController
         ]);
     }
 
+    public function view_about(){
+        echo View::createView3("about.php",[]);
+    }
+
     public function getIndexData()
     {
         $query = "SELECT count(*) as total, sum(state = 'released') as released, sum(state = 'deceased') as deceased, count(DISTINCT country) as cntry 

@@ -4,8 +4,8 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
 
 <head>
     <!-- chart.js Chart -->
-    <script src="../view/assets/js/Chart.bundle.js"></script>
-    <script src="../view/assets/js/utils.js"></script>
+    <script src="view/assets/js/Chart.bundle.js"></script>
+    <script src="view/assets/js/utils.js"></script>
     <!-- Page Title -->
     <title>COVIDKOREA</title>
 
@@ -21,11 +21,11 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
 
     <!-- ======= Magnific Popup CSS ======= -->
-    <link rel="stylesheet" href="../view/assets/plugins/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" href="view/assets/plugins/magnific-popup/magnific-popup.min.css">
 
     <!-- ======= Main Stylesheet ======= -->
-    <link rel="stylesheet" href="../view/assets/css/style.css" />
-    <link rel="stylesheet" href="../view/assets/css/custom.css" />
+    <link rel="stylesheet" href="view/assets/css/style.css" />
+    <link rel="stylesheet" href="view/assets/css/custom.css" />
 </head>
 
 <body>
@@ -39,8 +39,8 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                         <div class="col-lg-2 col-sm-4 col-5">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="../index">
-                                    <img src="../view/assets/img/logo5.png" alt="" />
+                                <a href="index">
+                                    <img src="view/assets/img/logo5.png" alt="" />
                                 </a>
                             </div>
                             <!-- End Logo -->
@@ -52,17 +52,17 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                                 <!-- Nav -->
                                 <ul class="nav align-items-center onPageNav">
                                     <li>
-                                        <a href="../index">Home</a>
+                                        <a href="index">Home</a>
                                     </li>
                                     <li>
-                                        <a href="../data">Data</a>
+                                        <a href="data">Data</a>
                                         <ul class="sub-menu">
-                                            <li><a href="tables">Data Table</a></li>
-                                            <li><a href="charts">Data Chart</a></li>
+                                            <li><a href="datatables">Data Table</a></li>
+                                            <li><a href="datacharts">Data Chart</a></li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="about.html">About COVID-19</a>
+                                        <a href="about">About COVID-19</a>
                                     </li>
                                 </ul>
                                 <!-- End Nav -->
@@ -71,9 +71,9 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="login" class="btn header-btn">
+                            <a href="admin/login" class="btn header-btn">
                                 <span class="icon d-sm-none">
-                                    <img src="../view/assets/img/icon/sick.svg" class="svg" alt="">
+                                    <img src="view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
                                 <span class="d-none d-sm-block">LOGIN</span>
                             </a>
@@ -85,16 +85,16 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
         <!-- End Header -->
 
         <!-- Banner -->
-        <section class="banner d-flex align-items-center justify-content-center" data-bg-img="../view/assets/img/banner3.jpg">
+        <section class="banner d-flex align-items-center justify-content-center" data-bg-img="view/assets/img/banner3.jpg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
                         <!-- Banner Content -->
                         <div class="banner-content text-left">
-                            <h1>EXPLORE THE DATA OF COVID-19 IN SOUTH KOREA</h1>
+                            <h1>EXPLORE THE DATA OF COVID-19 IN SOUTH KOREA | IN FORM OF CHARTS</h1>
                             <div class="banner-btn-group">
                                 <a href="#datacharts" class="btn">DATA CHARTS</a>
-                                <a href="tables" class="btn">DATA TABLES</a>
+                                <a href="datatables" class="btn">DATA TABLES</a>
                             </div>
                         </div>
                         <!-- End Banner Content -->
@@ -173,7 +173,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
             <!-- /.row small-spacing -->
         </div>
         <!-- Footer -->
-        <footer class="footer bg-cover" data-bg-img="../view/assets/img/footer.jpg">
+        <footer class="footer bg-cover" data-bg-img="view/assets/img/footer.jpg">
             <!-- Footer Top -->
             <div class="container">
                 <!-- Footer Main -->
@@ -184,7 +184,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                             <div class="widget widget-about text-gray">
                                 <!-- Logo -->
                                 <div class="logo mb-30">
-                                    <a href="../index"><img src="../view/assets/img/logo6.png" alt="" /></a>
+                                    <a href="../index"><img src="view/assets/img/logo6.png" alt="" /></a>
                                 </div>
                                 <!-- End Logo -->
                                 <p>Presenting COVID-19 data in South Korea which is presented in the distribution of maps, data charts and data tables.</p>
@@ -197,9 +197,9 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                             <div class="widget widget_nav_menu">
                                 <h3 class="widget-title text-gray">Shortcut Links</h3>
                                 <ul class="list-unstyled text-gray">
-                                    <li><a href="#home">Home</a></li>
-                                    <li><a href="data.html">Data</a></li>
-                                    <li><a href="about.html">About COVID-19</a></li>
+                                    <li><a href="index">Home</a></li>
+                                    <li><a href="data">Data</a></li>
+                                    <li><a href="about">About COVID-19</a></li>
                                 </ul>
                             </div>
                             <!-- End Widget -->
@@ -251,22 +251,22 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
     <!-- End Main Wrapper -->
 
     <!-- ======= jQuery Library ======= -->
-    <script src="../view/assets/js/jquery.min.js"></script>
+    <script src="view/assets/js/jquery.min.js"></script>
 
     <!-- ======= Magnific Popup JS ======= -->
-    <script src="../view/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="view/assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
 
     <!-- ======= One Page Nav JS ======= -->
-    <script src="../view/assets/plugins/nav/nav.min.js"></script>
+    <script src="view/assets/plugins/nav/nav.min.js"></script>
 
     <!-- ======= Menu JS ======= -->
-    <script src="../view/assets/js/menu.min.js"></script>
+    <script src="view/assets/js/menu.min.js"></script>
 
     <!-- ======= Main JS ======= -->
-    <script src="../view/assets/js/main.js"></script>
+    <script src="view/assets/js/main.js"></script>
 
     <!-- ======= Data Table JS ======= -->
-    <script src="../view/assets/plugins/data-tables/datatables.min.js"></script>
+    <script src="view/assets/plugins/data-tables/datatables.min.js"></script>
 
     <!-- ======= Line chart search trend ======= -->
     <script>
