@@ -1,1 +1,8 @@
+
 Testerrr
+//CATATAN ADA MASALAH UX di VIEW
+
+[Bug][P3] Logo Korea warnanya sama dengan background, mengurangi readability user, attempt to change color logo2
+[Bug][P2] Hover warna inconsistent--harusnya selalu merah klo lagi di page tertentu malah tidak ikut warna merah
+[Bug][P1] Harusnya di mapnya langsung Korea Selatan aja, jangan worldwides
+
