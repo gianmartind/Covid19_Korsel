@@ -1,0 +1,2 @@
+1. Buat database dengan nama "testcsv"
+2. import covid19korsel.sql ke database
