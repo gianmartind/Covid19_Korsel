@@ -17,7 +17,12 @@ class adminController
 
     public function view_login()
     {
-        echo View::createView3('login.php',[]);
+        session_start();
+        if (isset($_SESSION['admin']) && $_SESSION != "") {
+            header('Location: /Covid19_Korsel/admin');
+        } else {
+            echo View::createView3('login.php', []);
+        }
     }
 
     //check login Admin
@@ -36,6 +41,8 @@ class adminController
             $result = $this->db->ngitungbaris($query);
             if ($result > 0) {
                 $check = true;
+                session_start();
+                $_SESSION['admin'] = $name;
                 $this->db->betulgak($check, '/Covid19_Korsel/admin');
             } else {
                 header('Location: /Covid19_Korsel/admin/login ');
@@ -88,17 +95,22 @@ class adminController
     // view_admin
     public function view_admin()
     {
-        $result = $this->getAllPatient();
-        $result2 = $this->getAllTrend();
-        $result3 = $this->getAllPolicy();
-        echo View::createView3(
-            'admin.php',
-            [
-                "result" => $result,
-                "result2" => $result2,
-                "result3" => $result3
-            ]
-        );
+        session_start();
+        if (isset($_SESSION['admin']) && $_SESSION['admin'] != "") {
+            $result = $this->getAllPatient();
+            $result2 = $this->getAllTrend();
+            $result3 = $this->getAllPolicy();
+            echo View::createView3(
+                'admin.php',
+                [
+                    "result" => $result,
+                    "result2" => $result2,
+                    "result3" => $result3
+                ]
+            );
+        } else {
+            header('Location: /Covid19_Korsel/admin/login ');
+        }
     }
 
 
@@ -107,6 +119,8 @@ class adminController
 
     public function logout()
     {
+        session_start();
+        unset($_SESSION['admin']);
         header('Location: /Covid19_Korsel/admin/login');
     }
 
