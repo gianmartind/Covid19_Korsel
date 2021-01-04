@@ -436,7 +436,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
             type: 'pie',
             data: {
                 datasets: myDataset_1,
-                labels: ["Unidentified", "0s", "100s", "10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s"]
+                labels: ["Unidentified", "0s", "10s", "20s", "30s", "40s", "50s", "60s", "70s", "80s", "90s", "100s"]
             },
             options: {
                 title: {

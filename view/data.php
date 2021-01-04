@@ -131,7 +131,7 @@
                             <div class="widget widget_nav_menu">
                                 <h3 class="widget-title text-gray">Shortcut Links</h3>
                                 <ul class="list-unstyled text-gray">
-                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="index">Home</a></li>
                                     <li><a href="data">Data</a></li>
                                     <li><a href="about">About COVID-19</a></li>
                                 </ul>

@@ -14,9 +14,7 @@
     <link rel="shortcut icon" href="favicon.png" />
 
     <!-- Web Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800,900%7CPoppins:300,400,500,600,700,800,900&display=swap" rel="stylesheet" />
 
     <!-- ======= Magnific Popup CSS ======= -->
     <link rel="stylesheet" href="view/assets/plugins/magnific-popup/magnific-popup.min.css">
@@ -39,7 +37,7 @@
         <header class="header">
             <div class="header-fixed">
                 <div class="container">
-                    <div class="row no-gutters align-items-center position-relative"> 
+                    <div class="row no-gutters align-items-center position-relative">
                         <div class="col-lg-2 col-sm-4 col-5">
                             <!-- Logo -->
                             <div class="logo">
@@ -49,11 +47,10 @@
                             </div>
                             <!-- End Logo -->
                         </div>
-                        
+
                         <div class="col-lg-8 col-sm-4 col-4 position-static">
                             <!-- Main Menu -->
-                            <div
-                                class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
+                            <div class="main-menu d-flex align-items-center justify-content-lg-center justify-content-end">
                                 <!-- Nav -->
                                 <ul class="nav align-items-center onPageNav">
                                     <li>
@@ -68,7 +65,7 @@
                                     </li>
                                     <li>
                                         <a href="about">About COVID-19</a>
-                                    </li>                              
+                                    </li>
                                 </ul>
                                 <!-- End Nav -->
                             </div>
@@ -76,7 +73,7 @@
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="admin/login" class="btn header-btn">
+                            <a href="admin/logout" class="btn header-btn">
                                 <span class="icon d-sm-none">
                                     <img src="view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
@@ -139,24 +136,24 @@
                         </div>
                     </div>
                     -->
-                    <div class="col-12">
-                        <!-- Data Table -->
-                        <div class="coronaDataTableWrapper table-responsive">
-                            <table class="coronaDataTable" id="tableData">
-                                <thead>
-                                    <tr>
-                                        <th>Patient ID</th>
-                                        <th>Sex</th>
-                                        <th>Age</th>
-                                        <th>Country</th>
-                                        <th>Province</th>
-                                        <th>City</th>
-                                        <th>Infection Case</th>
-                                        <th>Confirmed Date</th>
-                                        <th>State</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                <div class="col-12">
+                    <!-- Data Table -->
+                    <div class="coronaDataTableWrapper table-responsive">
+                        <table class="coronaDataTable" id="tableData">
+                            <thead>
+                                <tr>
+                                    <th>Patient ID</th>
+                                    <th>Sex</th>
+                                    <th>Age</th>
+                                    <th>Country</th>
+                                    <th>Province</th>
+                                    <th>City</th>
+                                    <th>Infection Case</th>
+                                    <th>Confirmed Date</th>
+                                    <th>State</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 <?php
                                 foreach ($result as $key => $row) {
                                     echo "<tr>";
@@ -172,109 +169,126 @@
                                     echo "</tr>";
                                 }
                                 ?>
-                                </tbody>
-                            </table>
-                            <div>
-                                <br>
-                            </div>
-                            <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id01').style.display='block'">
-                                <a class="btn">ADD NEW DATA</a>
-                            </button>
-                            <div id="id01" class="modal">
-                                <div class="modal-content">
-                                  <div class="container">
+                            </tbody>
+                        </table>
+                        <div>
+                            <br>
+                        </div>
+                        <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id01').style.display='block'">
+                            <a class="btn">ADD NEW DATA</a>
+                        </button>
+                        <div id="id01" class="modal">
+                            <div class="modal-content">
+                                <div class="container">
                                     <a onclick="document.getElementById('id01').style.display='none'" class="closebtn">&times;</a>
                                     <h2 style="text-align: center;">ADD NEW DATA</h2>
                                     <br>
                                     <form action="admin/addPatient" method="post">
-                                        <div class="tg-wrap"><table style="padding: 10px;">
-                                            <thead>
-                                              
-                                            </thead>
-                                            <tbody>
-                                              <tr>              
-                                                <td><label for="gender">SEX</label></td>
-                                                <td>
-                                                    <input type="radio" id="male" name="gender" value="male" checked><label for="male">&nbsp;Male</label>
-                                                    <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="age">AGE</label></td>
-                                                <td><input type="text" id="age" name="age" required></td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="country">COUNTRY</label></td>
-                                                <td>
-                                                    <select id="country" name="country">
-                                                        <option value="South Korea">South Korea</option>
-                                                        <option value="North Korea">North Korea</option>
-                                                    </select>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="province">PROVINCE</label></td>
-                                                <td>
-                                                    <select id="province" name="province">
-                                                        <option value="Busan">Busan</option>
-                                                        <option value="Chungcheongbuk-do">Chungcheongbuk-do</option>
-                                                        <option value="Chungcheongnam-do">Chungcheongnam-do</option>
-                                                        <option value="Daegu">Daegu</option>
-                                                        <option value="Gangwon-do">Gangwon-do</option>
-                                                        <option value="Gwangju">Gwangju</option>
-                                                        <option value="Gyeonggi-do">Gyeonggi-do</option>
-                                                        <option value="Gyeongsangbuk-do">Gyeongsangbuk-do</option>
-                                                        <option value="Gyeongsangnam-do">Gyeongsangnam-do</option>
-                                                        <option value="Incheon">Incheon</option>
-                                                        <option value="Jeju-do">Jeju-do</option>
-                                                        <option value="Jeollabuk-do">Jeollabuk-do</option>
-                                                        <option value="Jeollanam-do">Jeollanam-do</option>
-                                                        <option value="Sejong">Sejong</option>
-                                                        <option value="Seoul">Seoul</option>
-                                                        <option value="Ulsan">Ulsan</option>
-                                                    </select>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="city">CITY</label></td>
-                                                <td>
-                                                    <input type="text" id="city" name="city" required>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="case">INFECTION CASE</label></td>
-                                                <td><input type="text" id="case" name="case" required></td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="date">CONFIRMED DATE</label></td>
-                                                <td>
-                                                    <input type="date" id="date" name="date" required>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="state">STATE</label></td>
-                                                <td>
-                                                    <select id="state" name="state">
-                                                        <option value="released">Released</option>
-                                                        <option value="deceased">Deceased</option>
-                                                        <option value="isolated">Isolated</option>
-                                                    </select>
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                            </table></div>
-                                            <button class="banner-btn-group" style="align-content: center;color: white;padding: 5px; margin-top: 10px;">
-                                                <a class="btn">SUBMIT</a>
-                                            </button>
+                                        <div class="tg-wrap">
+                                            <table style="padding: 10px;">
+                                                <thead>
+
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><label for="gender">SEX</label></td>
+                                                        <td>
+                                                            <input type="radio" id="male" name="gender" value="male" checked><label for="male">&nbsp;Male</label>
+                                                            <input type="radio" id="female" name="gender" value="female"><label for="male">&nbsp;Female</label>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="age">AGE</label></td>
+                                                        <td>
+                                                            <select id="age" name="age">
+                                                                <option value="Unidentified">Unidentified</option>
+                                                                <option value="0s">0s</option>
+                                                                <option value="10s">10s</option>
+                                                                <option value="20s">20s</option>
+                                                                <option value="30s">30s</option>
+                                                                <option value="40s">40s</option>
+                                                                <option value="50s">50s</option>
+                                                                <option value="60s">60s</option>
+                                                                <option value="70s">70s</option>
+                                                                <option value="80s">80s</option>
+                                                                <option value="90s">90s</option>
+                                                                <option value="100s">100s</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="country">COUNTRY</label></td>
+                                                        <td>
+                                                            <select id="country" name="country">
+                                                                <option value="South Korea">South Korea</option>
+                                                                <option value="North Korea">North Korea</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="province">PROVINCE</label></td>
+                                                        <td>
+                                                            <select id="province" name="province">
+                                                                <option value="Busan">Busan</option>
+                                                                <option value="Chungcheongbuk-do">Chungcheongbuk-do</option>
+                                                                <option value="Chungcheongnam-do">Chungcheongnam-do</option>
+                                                                <option value="Daegu">Daegu</option>
+                                                                <option value="Gangwon-do">Gangwon-do</option>
+                                                                <option value="Gwangju">Gwangju</option>
+                                                                <option value="Gyeonggi-do">Gyeonggi-do</option>
+                                                                <option value="Gyeongsangbuk-do">Gyeongsangbuk-do</option>
+                                                                <option value="Gyeongsangnam-do">Gyeongsangnam-do</option>
+                                                                <option value="Incheon">Incheon</option>
+                                                                <option value="Jeju-do">Jeju-do</option>
+                                                                <option value="Jeollabuk-do">Jeollabuk-do</option>
+                                                                <option value="Jeollanam-do">Jeollanam-do</option>
+                                                                <option value="Sejong">Sejong</option>
+                                                                <option value="Seoul">Seoul</option>
+                                                                <option value="Ulsan">Ulsan</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="city">CITY</label></td>
+                                                        <td>
+                                                            <input type="text" id="city" name="city" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="case">INFECTION CASE</label></td>
+                                                        <td><input type="text" id="case" name="case" required></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="date">CONFIRMED DATE</label></td>
+                                                        <td>
+                                                            <input type="date" id="date" name="date" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="state">STATE</label></td>
+                                                        <td>
+                                                            <select id="state" name="state">
+                                                                <option value="released">Released</option>
+                                                                <option value="deceased">Deceased</option>
+                                                                <option value="isolated">Isolated</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <button class="banner-btn-group" style="align-content: center;color: white;padding: 5px; margin-top: 10px;">
+                                            <a class="btn">SUBMIT</a>
+                                        </button>
                                     </form>
-                                  </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- End Data Table -->
-                        
                     </div>
+                    <!-- End Data Table -->
+
                 </div>
+            </div>
             </div>
         </section>
         <!-- End Data Table -->
@@ -308,20 +322,20 @@
                         </div>
                     </div>
                     -->
-                    <div class="col-12">
-                        <!-- Data Table -->
-                        <div class="coronaDataTableWrapper table-responsive">
-                            <table class="coronaDataTable" id="tableSearch">
-                                <thead>
-                                    <tr>
-                                        <th>Date</th>
-                                        <th>Cold</th>
-                                        <th>Flu</th>
-                                        <th>Pneumonia</th>
-                                        <th>Coronavirus</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                <div class="col-12">
+                    <!-- Data Table -->
+                    <div class="coronaDataTableWrapper table-responsive">
+                        <table class="coronaDataTable" id="tableSearch">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Cold</th>
+                                    <th>Flu</th>
+                                    <th>Pneumonia</th>
+                                    <th>Coronavirus</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 <?php
                                 foreach ($result2 as $key => $row) {
                                     echo "<tr>";
@@ -333,60 +347,62 @@
                                     echo "</tr>";
                                 }
                                 ?>
-                                </tbody>
-                            </table>
-                            <div>
-                                <br>
-                            </div>
-                            <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id02').style.display='block'">
-                                <a class="btn">ADD NEW DATA</a>
-                            </button>
-                            <div id="id02" class="modal">
-                                <div class="modal-content">
-                                  <div class="container">
+                            </tbody>
+                        </table>
+                        <div>
+                            <br>
+                        </div>
+                        <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id02').style.display='block'">
+                            <a class="btn">ADD NEW DATA</a>
+                        </button>
+                        <div id="id02" class="modal">
+                            <div class="modal-content">
+                                <div class="container">
                                     <a onclick="document.getElementById('id02').style.display='none'" class="closebtn">&times;</a>
                                     <h2 style="text-align: center;">ADD NEW DATA</h2>
                                     <br>
                                     <form action="admin/addSearchtrends" method="post">
-                                        <div class="tg-wrap"><table style="padding: 10px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                                <tr>              
-                                                    <td><label for="date">DATE</label></td>
-                                                    <td>
-                                                        <input type="date" id="date" name="date" required>
-                                                    </td>
-                                                  </tr>
-                                              <tr>
-                                                <td><label for="cold">COLD</label></td>
-                                                <td><input type="number" id="cold" name="cold" min="0" max="1" step="0.00001" required></td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="flu">FLU</label></td>
-                                                <td><input type="number" id="flu" name="flue" min="0" max="1" step="0.00001" required></td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="pneumonia">Pneumonia</label></td>
-                                                <td><input type="number" id="pneumonia" name="pneumonia" min="0" max="1" step="0.00001" required></td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="coronavirus">Coronavirus</label></td>
-                                                <td><input type="number" id="coronavirus" name="coronavirus" min="0" max="1" step="0.00001" required></td>
-                                              </tr>
-                                            </tbody>
-                                            </table></div>
-                                            <button class="banner-btn-group" style="align-content: center;color: white;padding: 5px; margin-top: 10px;">
-                                                <a class="btn">SUBMIT</a>
-                                            </button>
+                                        <div class="tg-wrap">
+                                            <table style="padding: 10px;">
+                                                <thead>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><label for="date">DATE</label></td>
+                                                        <td>
+                                                            <input type="date" id="date" name="date" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="cold">COLD</label></td>
+                                                        <td><input type="number" id="cold" name="cold" min="0" max="1" step="0.00001" required></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="flu">FLU</label></td>
+                                                        <td><input type="number" id="flu" name="flue" min="0" max="1" step="0.00001" required></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="pneumonia">Pneumonia</label></td>
+                                                        <td><input type="number" id="pneumonia" name="pneumonia" min="0" max="1" step="0.00001" required></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="coronavirus">Coronavirus</label></td>
+                                                        <td><input type="number" id="coronavirus" name="coronavirus" min="0" max="1" step="0.00001" required></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <button class="banner-btn-group" style="align-content: center;color: white;padding: 5px; margin-top: 10px;">
+                                            <a class="btn">SUBMIT</a>
+                                        </button>
                                     </form>
-                                  </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- End Data Table -->
                     </div>
+                    <!-- End Data Table -->
                 </div>
+            </div>
             </div>
         </section>
         <!-- End Data Table -->
@@ -420,22 +436,22 @@
                         </div>
                     </div>
                     -->
-                    <div class="col-12">
-                        <!-- Data Table -->
-                        <div class="coronaDataTableWrapper table-responsive">
-                            <table class="coronaDataTable" id="tablePolicy">
-                                <thead>
-                                    <tr>
-                                        <th>Policy ID</th>
-                                        <th>Country</th>
-                                        <th>Type</th>
-                                        <th>Gov. Policy</th>
-                                        <th>Detail</th>
-                                        <th>Start date</th>
-                                        <th>End date</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                <div class="col-12">
+                    <!-- Data Table -->
+                    <div class="coronaDataTableWrapper table-responsive">
+                        <table class="coronaDataTable" id="tablePolicy">
+                            <thead>
+                                <tr>
+                                    <th>Policy ID</th>
+                                    <th>Country</th>
+                                    <th>Type</th>
+                                    <th>Gov. Policy</th>
+                                    <th>Detail</th>
+                                    <th>Start date</th>
+                                    <th>End date</th>
+                                </tr>
+                            </thead>
+                            <tbody>
                                 <?php
                                 foreach ($result3 as $key => $row) {
                                     echo "<tr>";
@@ -449,86 +465,88 @@
                                     echo "</tr>";
                                 }
                                 ?>
-                                </tbody>
-                            </table>
-                            <div>
-                                <br>
-                            </div>
-                            <div id="id03" class="modal">
-                                <div class="modal-content">
-                                  <div class="container">
+                            </tbody>
+                        </table>
+                        <div>
+                            <br>
+                        </div>
+                        <div id="id03" class="modal">
+                            <div class="modal-content">
+                                <div class="container">
                                     <a onclick="document.getElementById('id03').style.display='none'" class="closebtn">&times;</a>
                                     <h2 style="text-align: center;">ADD NEW DATA</h2>
                                     <br>
                                     <form action="admin/addPolicy" method="post">
-                                        <div class="tg-wrap"><table style="padding: 10px;">
-                                            <thead>
-                                            </thead>
-                                            <tbody>
-                                              <tr>
-                                                <td><label for="country">COUNTRY</label></td>
-                                                <td>
-                                                    <select id="country" name="country">
-                                                        <option value="South Korea">South Korea</option>
-                                                        <option value="North Korea">North Korea</option>
-                                                    </select>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="type">TYPE</label></td>
-                                                <td>
-                                                    <select id="type" name="type">
-                                                        <option value="Administrative">Administrative</option>
-                                                        <option value="Alert">Alert</option>
-                                                        <option value="Education">Education</option>
-                                                        <option value="Health">Health</option>
-                                                        <option value="Immigration">Immigration</option>
-                                                        <option value="Social">Social</option>
-                                                        <option value="Technology">Technology</option>
-                                                    </select>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="govPolicy">Gov. Policy</label></td>
-                                                <td>
-                                                    <input type="text" id="govPolicy" name="govPolicy" required>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="detail">DETAIL</label></td>
-                                                <td>
-                                                    <input type="text" id="detail" name="detail" required>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="startDate">START DATE</label></td>
-                                                <td>
-                                                    <input type="date" id="startDate" name="startDate" required>
-                                                </td>
-                                              </tr>
-                                              <tr>
-                                                <td><label for="endDate">END DATE</label></td>
-                                                <td>
-                                                    <input type="date" id="endDate" name="endDate" required>
-                                                </td>
-                                              </tr>
-                                            </tbody>
-                                            </table></div>
-                                            <button class="banner-btn-group" style="align-content: center;color: white;padding: 5px; margin-top: 10px;" >
-                                                <a class="btn">SUBMIT</a>
-                                            </button>
+                                        <div class="tg-wrap">
+                                            <table style="padding: 10px;">
+                                                <thead>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td><label for="country">COUNTRY</label></td>
+                                                        <td>
+                                                            <select id="country" name="country">
+                                                                <option value="South Korea">South Korea</option>
+                                                                <option value="North Korea">North Korea</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="type">TYPE</label></td>
+                                                        <td>
+                                                            <select id="type" name="type">
+                                                                <option value="Administrative">Administrative</option>
+                                                                <option value="Alert">Alert</option>
+                                                                <option value="Education">Education</option>
+                                                                <option value="Health">Health</option>
+                                                                <option value="Immigration">Immigration</option>
+                                                                <option value="Social">Social</option>
+                                                                <option value="Technology">Technology</option>
+                                                            </select>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="govPolicy">Gov. Policy</label></td>
+                                                        <td>
+                                                            <input type="text" id="govPolicy" name="govPolicy" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="detail">DETAIL</label></td>
+                                                        <td>
+                                                            <input type="text" id="detail" name="detail" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="startDate">START DATE</label></td>
+                                                        <td>
+                                                            <input type="date" id="startDate" name="startDate" required>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><label for="endDate">END DATE</label></td>
+                                                        <td>
+                                                            <input type="date" id="endDate" name="endDate" required>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <button class="banner-btn-group" style="align-content: center;color: white;padding: 5px; margin-top: 10px;">
+                                            <a class="btn">SUBMIT</a>
+                                        </button>
                                     </form>
-                                  </div>
                                 </div>
                             </div>
-                            <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id03').style.display='block'">
-                                <a class="btn">ADD NEW DATA</a>
-                            </button>
-                            
                         </div>
-                        <!-- End Data Table -->
+                        <button class="banner-btn-group" style="align-content: center;color: white;" onclick="document.getElementById('id03').style.display='block'">
+                            <a class="btn">ADD NEW DATA</a>
+                        </button>
+
                     </div>
+                    <!-- End Data Table -->
                 </div>
+            </div>
             </div>
         </section>
         <!-- End Data Table -->
@@ -632,4 +650,3 @@
     <!-- ======= Custom JS ======= -->
     <script src="view/assets/js/custom.js"></script>
 </body>
-
