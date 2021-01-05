@@ -73,11 +73,11 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="admin/login" class="btn header-btn">
+                            <a href="admin/<?php echo $log_status?>" class="btn header-btn">
                                 <span class="icon d-sm-none">
                                     <img src="view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
-                                <span class="d-none d-sm-block">LOGIN</span>
+                                <span class="d-none d-sm-block"><?php echo $log_status?></span>
                             </a>
                         </div>
                     </div>

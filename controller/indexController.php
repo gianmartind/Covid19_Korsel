@@ -18,14 +18,27 @@ class IndexController
     {
         $indexData = $this->getIndexData();
         $provinceDetails = $this->getProvinceDetails();
+        session_start();
+        $log_status = "login";
+        if(isset($_SESSION['admin']) && $_SESSION['admin'] != ""){
+            $log_status = "logout";
+        }
         echo View::createView3("index.php", [
             "indexData" => $indexData,
-            "provinceDetails" => $provinceDetails
+            "provinceDetails" => $provinceDetails,
+            "log_status" => $log_status
         ]);
     }
 
     public function view_about(){
-        echo View::createView3("about.php",[]);
+        session_start();
+        $log_status = "login";
+        if(isset($_SESSION['admin']) && $_SESSION['admin'] != ""){
+            $log_status = "logout";
+        }
+        echo View::createView3("about.php",[
+            "log_status" => $log_status
+        ]);
     }
 
     public function getIndexData()
