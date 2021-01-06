@@ -121,11 +121,11 @@
                         <div class="corona-live-update top-50" data-bg-img="view/assets/img/pattern.png">
                             <div class="row align-items-center no-gutters">
                                 <div class="col-lg">
-                                    <div class="live-update-title d-flex flex-column align-items-center justify-content-center p-20">
-                                        <h2 class="d-inline-flex align-items-center">
-                                            <span>Live</span>
-                                            <span>update</span> </h2>
-                                        <span>world update</span>
+                                    <div class="d-flex flex-column align-items-center justify-content-center p-20">
+                                        <h4 class="south-korea-update" style="color: rgb(204, 12, 27)">
+                                            <span>SOUTH</span>
+                                            <span>KOREA</span> </h4>
+                                        <span>Update</span>
                                     </div>
                                 </div>
 
@@ -149,14 +149,14 @@
                                         <!-- Info -->
                                         <div class="col-lg-3 col-sm-6 cu_info cu_deaths d-flex flex-column align-items-center justify-content-center p-30">
                                             <h2 class=""><?php echo $indexData[0]->getDeceased() ?></h2>
-                                            <span>Total Deaths</span>
+                                            <span>Deceased</span>
                                         </div>
                                         <!-- End Info -->
 
 
                                         <!-- Info -->
                                         <div class="col-lg-3 col-sm-6 cu_info cu_countries d-flex flex-column align-items-center justify-content-center p-30">
-                                            <h2 class=""><?php echo $indexData[0]->getCountry() ?></h2>
+                                            <h2 class=""><?php echo $indexData[0]->getProvince() ?></h2>
                                             <span>Provinces</span>
                                         </div>
                                         <!-- End Info -->
@@ -227,7 +227,7 @@
                             <div class="widget widget-about text-gray">
                                 <!-- Logo -->
                                 <div class="logo mb-30">
-                                    <a href="index.html"><img src="view/assets/img/logo6.png" alt="" /></a>
+                                    <a href="index"><img src="view/assets/img/logo6.png" alt="" /></a>
                                 </div>
                                 <!-- End Logo -->
                                 <p>Presenting COVID-19 data in South Korea which is presented in the distribution of maps, data charts and data tables.</p>

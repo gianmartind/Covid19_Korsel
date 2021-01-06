@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 23, 2020 at 02:13 PM
+-- Generation Time: Jan 06, 2021 at 01:17 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -47,7 +47,7 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 --
 
 CREATE TABLE `coordinates` (
-  `province` varchar(16) DEFAULT NULL,
+  `province` varchar(20) DEFAULT NULL,
   `latitude` decimal(9,7) DEFAULT NULL,
   `longitude` decimal(10,7) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -70,7 +70,10 @@ INSERT INTO `coordinates` (`province`, `latitude`, `longitude`) VALUES
 ('Jeollanam-do', '34.8159000', '126.4629000'),
 ('Sejong', '36.4799999', '127.2890000'),
 ('Seoul', '37.5666791', '126.9782914'),
-('Ulsan', '35.5391697', '129.3119136');
+('Ulsan', '35.5391697', '129.3119136'),
+('Busan', '35.1333885', '129.1058350'),
+('Chungcheongbuk-do', '36.6357000', '127.4915000'),
+('Chungcheongnam-do', '36.6593000', '126.6729000');
 
 -- --------------------------------------------------------
 
@@ -5353,7 +5356,8 @@ INSERT INTO `policy` (`policy_id`, `country`, `type`, `gov_policy`, `detail`, `s
 (58, 'Korea', 'Transformation', 'Wearing of masks', 'Mandatory wearing of passenger mask domestic, international teminal in the airport', '2020-05-27', '0000-00-00'),
 (59, 'Korea', 'Transformation', 'Wearing of masks', 'Drivers such as buses and taxis can refuse to ride passengers without masks', '2020-05-26', '0000-00-00'),
 (60, 'Korea', 'Technology', 'KI-Pass: Korea Internet - Pass', 'new quick response (QR) code system this week to log visitors at high-risk entertainment facilities, restaurants and churches in a bid to track coronavirus cases and prevent further spread of the disease', '2020-06-10', '0000-00-00'),
-(61, 'Korea', 'Health', 'Extends Tightened Quarantine Measures ', 'Gov\'t Extends Tightened Quarantine Measures in Seoul Metro Area', '2020-05-28', '2020-06-14');
+(61, 'Korea', 'Health', 'Extends Tightened Quarantine Measures ', 'Gov\'t Extends Tightened Quarantine Measures in Seoul Metro Area', '2020-05-28', '2020-06-14'),
+(62, 'South', 'Administrative', 'Special', 'from China', '2021-01-31', '2021-01-31');
 
 -- --------------------------------------------------------
 
@@ -7016,7 +7020,8 @@ INSERT INTO `searchtrend` (`date`, `cold`, `flu`, `pneumonia`, `coronavirus`) VA
 ('2020-06-26', '0.11381', '0.03027', '0.11317', '2.15139'),
 ('2020-06-27', '0.10554', '0.02136', '0.08354', '1.96848'),
 ('2020-06-28', '0.12563', '0.02872', '0.08072', '2.19720'),
-('2020-06-29', '0.14263', '0.04308', '0.11254', '2.41501');
+('2020-06-29', '0.14263', '0.04308', '0.11254', '2.41501'),
+('2021-01-02', '0.14235', '0.12399', '0.42151', '0.51224');
 
 --
 -- Indexes for dumped tables

@@ -3,13 +3,13 @@
         public $confirmed;
         public $recovered;
         public $deceased;
-        public $country;
+        public $province;
 
-        public function __construct($confirmed, $recovered, $deceased, $country){
+        public function __construct($confirmed, $recovered, $deceased, $province){
             $this->confirmed = $confirmed;
             $this->recovered = $recovered;
             $this->deceased = $deceased;
-            $this->country = $country;
+            $this->province = $province;
         }
 
         public function getConfirmed(){
@@ -17,15 +17,15 @@
         }
 
         public function getRecovered(){
-            return $this->confirmed;
+            return $this->recovered;
         }
 
         public function getDeceased(){
             return $this->deceased;
         }
 
-        public function getCountry(){
-            return $this->country;
+        public function getProvince(){
+            return $this->province;
         }
     }
 ?>

@@ -43,11 +43,11 @@ class IndexController
 
     public function getIndexData()
     {
-        $query = "SELECT count(*) as total, sum(state = 'released') as released, sum(state = 'deceased') as deceased, count(DISTINCT country) as cntry 
+        $query = "SELECT count(*) as total, sum(state = 'released') as released, sum(state = 'deceased') as deceased, count(DISTINCT province) as prov 
             FROM `patientinfo`";
         $query_result = $this->db->executeSelectQuery($query);
         foreach ($query_result as $key => $value) {
-            $result[] = new IndexData($value['total'], $value['released'], $value['deceased'], $value['cntry']);
+            $result[] = new IndexData($value['total'], $value['released'], $value['deceased'], $value['prov']);
         }
         return $result;
     }

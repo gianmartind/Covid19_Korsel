@@ -169,7 +169,7 @@
                         <!-- Section Title -->
                         <div class="section-title text-center mb-75">
                             <span>about Symptoms</span>
-                            <h2>Covid-19 Symptoms</h2>
+                            <h2>COVID-19 Symptoms</h2>
                         </div>
                         <!-- End Section Title -->
                     </div>
@@ -240,8 +240,8 @@
                     <div class="col-12">
                         <!-- Section Title -->
                         <div class="section-title text-center mb-75">
-                            <span class="text-white">Covid prevention</span>
-                            <h2 class="text-white">Covid-19 Prevention</h2>
+                            <span class="text-white">COVID prevention</span>
+                            <h2 class="text-white">COVID-19 Prevention</h2>
                         </div>
                         <!-- End Section Title -->
                     </div>

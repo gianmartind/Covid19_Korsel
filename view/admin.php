@@ -114,7 +114,7 @@
                     <div class="col-12">
                         <!-- Section Title -->
                         <div class="section-title text-center mb-75">
-                            <span>Effected Region</span>
+                            <span>Affected Region</span>
                             <h2>South Korea</h2>
                         </div>
                         <!-- End Section Title -->
