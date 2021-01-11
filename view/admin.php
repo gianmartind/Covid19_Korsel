@@ -41,7 +41,7 @@
                         <div class="col-lg-2 col-sm-4 col-5">
                             <!-- Logo -->
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="index">
                                     <img src="view/assets/img/logo5.png" alt="" />
                                 </a>
                             </div>
@@ -245,6 +245,7 @@
                                                                 <option value="Sejong">Sejong</option>
                                                                 <option value="Seoul">Seoul</option>
                                                                 <option value="Ulsan">Ulsan</option>
+                                                                <option value="Daejeon">Daejeon</option>
                                                             </select>
                                                         </td>
                                                     </tr>
@@ -375,19 +376,19 @@
                                                     </tr>
                                                     <tr>
                                                         <td><label for="cold">COLD</label></td>
-                                                        <td><input type="number" id="cold" name="cold" min="0" max="1" step="0.00001" required></td>
+                                                        <td><input type="number" id="cold" name="cold" min="0" max="100" step="0.00001" required></td>
                                                     </tr>
                                                     <tr>
                                                         <td><label for="flu">FLU</label></td>
-                                                        <td><input type="number" id="flu" name="flue" min="0" max="1" step="0.00001" required></td>
+                                                        <td><input type="number" id="flu" name="flue" min="0" max="100" step="0.00001" required></td>
                                                     </tr>
                                                     <tr>
                                                         <td><label for="pneumonia">Pneumonia</label></td>
-                                                        <td><input type="number" id="pneumonia" name="pneumonia" min="0" max="1" step="0.00001" required></td>
+                                                        <td><input type="number" id="pneumonia" name="pneumonia" min="0" max="100" step="0.00001" required></td>
                                                     </tr>
                                                     <tr>
                                                         <td><label for="coronavirus">Coronavirus</label></td>
-                                                        <td><input type="number" id="coronavirus" name="coronavirus" min="0" max="1" step="0.00001" required></td>
+                                                        <td><input type="number" id="coronavirus" name="coronavirus" min="0" max="100" step="0.00001" required></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
