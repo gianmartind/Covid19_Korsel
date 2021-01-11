@@ -319,7 +319,7 @@
                             <div class="widget widget-about text-gray">
                                 <!-- Logo -->
                                 <div class="logo mb-30">
-                                    <a href="index.html"><img src="view/assets/img/logo6.png" alt="" /></a>
+                                    <a href="index"><img src="view/assets/img/logo6.png" alt="" /></a>
                                 </div>
                                 <!-- End Logo -->
                                 <p>Presenting COVID-19 data in South Korea which is presented in the distribution of maps, data charts and data tables.</p>
@@ -335,6 +335,7 @@
                                     <li><a href="index">Home</a></li>
                                     <li><a href="data">Data</a></li>
                                     <li><a href="about">About COVID-19</a></li>
+                                    <li><a href="admin">Admin Page</a></li>
                                 </ul>
                             </div>
                             <!-- End Widget -->

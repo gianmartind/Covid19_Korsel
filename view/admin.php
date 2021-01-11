@@ -580,6 +580,7 @@
                                     <li><a href="index">Home</a></li>
                                     <li><a href="data">Data</a></li>
                                     <li><a href="about">About COVID-19</a></li>
+                                    <li><a href="admin">Admin Page</a></li>
                                 </ul>
                             </div>
                             <!-- End Widget -->

@@ -64,7 +64,7 @@
 						<div class="col-lg-2 col-sm-4 col-5">
 							<!-- Logo -->
 							<div class="logo">
-								<a href="index.html">
+								<a href="index">
 									<img src="view/assets/img/logo5.png" alt="" />
 								</a>
 							</div>
@@ -87,7 +87,7 @@
 										</ul>
 									</li>
 									<li>
-										<a href="view/about.html">About COVID-19</a>
+										<a href="about">About COVID-19</a>
 									</li>
 								</ul>
 								<!-- End Nav -->
@@ -139,6 +139,7 @@
 									<li><a href="index">Home</a></li>
 									<li><a href="data">Data</a></li>
 									<li><a href="about">About COVID-19</a></li>
+									<li><a href="admin">Admin Page</a></li>
 								</ul>
 							</div>
 							<!-- End Widget -->

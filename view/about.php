@@ -77,11 +77,11 @@
                         </div>
 
                         <div class="col-lg-2 col-sm-4 col-3 text-right">
-                            <a href="admin/login" class="btn header-btn">
+                            <a href="admin/<?php echo $log_status?>" class="btn header-btn">
                                 <span class="icon d-sm-none">
                                     <img src="view/assets/img/icon/sick.svg" class="svg" alt="">
                                 </span>
-                                <span class="d-none d-sm-block">LOGIN</span>
+                                <span class="d-none d-sm-block"><?php echo $log_status?></span>
                             </a>
                         </div>
                     </div>
@@ -408,6 +408,7 @@
                                     <li><a href="index">Home</a></li>
                                     <li><a href="data">Data</a></li>
                                     <li><a href="about">About COVID-19</a></li>
+                                    <li><a href="admin">Admin Page</a></li>
                                 </ul>
                             </div>
                             <!-- End Widget -->
