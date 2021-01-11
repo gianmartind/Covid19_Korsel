@@ -336,9 +336,14 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                 },
                 title: {
                     display: true,
-                    text: 'Search Trends Around the World',
+                    text: 'Diseases Search Trends Around the World',
                 },
                 responsive: true,
+                legend : {
+                    labels : {
+                        fontSize : 20,
+                    }
+                }
             }
 
         }
@@ -393,6 +398,11 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                     text: 'Search Trend Frequency of Covid in 2020',
                 },
                 responsive: true,
+                legend : {
+                    labels : {
+                        fontSize : 20,
+                    }
+                }
             }
 
         }
@@ -442,9 +452,14 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
             options: {
                 title: {
                     display: true,
-                    text: 'Patients Number by Age',
+                    text: 'Number of Patients by Age',
                 },
                 responsive: true,
+                legend : {
+                    labels : {
+                        fontSize : 20,
+                    }
+                }
             }
         }
     </script>
@@ -484,9 +499,15 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
             options: {
                 title: {
                     display: true,
-                    text: 'Patients Number by Gender',
+                    text: 'Number of Patients by Gender',
                 },
                 responsive: true,
+                legend : {
+                    labels : {
+                        fontSize : 20,
+                    }
+                }
+                
             }
         }
     </script>
@@ -528,6 +549,11 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                     text: 'State of Patients',
                 },
                 responsive: true,
+                legend : {
+                    labels : {
+                        fontSize : 20,
+                    }
+                }
             }
         }
 
