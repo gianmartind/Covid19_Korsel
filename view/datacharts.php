@@ -109,7 +109,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                 <div class="col-12">
                     <!-- Section Title -->
                     <div class="section-title text-center mb-75">
-                        <span>Effected Region</span>
+                        <span>Affected Region</span>
                         <h2>South Korea</h2>
                     </div>
                     <!-- End Section Title -->
@@ -120,7 +120,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
             <div class="row">
                 <div class="col-lg-6 col-md-12">
                     <div class="box-content">
-                        <h4 class="box-title">Line Chart per Trend</h4>
+                        <h4 class="box-title">Various Diseases Search Trends up to Year 2020</h4>
                         <canvas id="trendline" width="480" height="320"></canvas>
                         <!-- /#line-chartjs-chart.chartjs-chart -->
                     </div>
@@ -130,7 +130,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
 
                 <div class="col-lg-6 col-md-12">
                     <div class="box-content">
-                        <h4 class="box-title">Line Chart Covid Year 2020</h4>
+                        <h4 class="box-title">Coronavirus Search Trends in 2020</h4>
                         <canvas id="trendlinecovid" width="480" height="320"></canvas>
                         <!-- /#line-chartjs-chart.chartjs-chart -->
                     </div>
@@ -141,7 +141,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
 
                 <div class="col-lg-6 col-md-12">
                     <div class="box-content">
-                        <h4 class="box-title">Pie Chart Age</h4>
+                        <h4 class="box-title">Patients' Age Distribution</h4>
                         <canvas id="pieage" width="480" height="320"></canvas>
                         <!-- /#pie-chartjs-chart.chartjs-chart -->
                     </div>
@@ -151,7 +151,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
 
                 <div class="col-lg-6 col-md-12">
                     <div class="box-content">
-                        <h4 class="box-title">Pie Chart Gender</h4>
+                        <h4 class="box-title">Patients' Gender</h4>
                         <canvas id="piegender" width="480" height="320"></canvas>
                         <!-- /#pie-chartjs-chart.chartjs-chart -->
                     </div>
@@ -161,7 +161,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
 
                 <div class="col-lg-6 col-md-12">
                     <div class="box-content">
-                        <h4 class="box-title">Pie Chart State</h4>
+                        <h4 class="box-title">Patients' State</h4>
                         <canvas id="piecase" width="480" height="320"></canvas>
                         <!-- /#pie-chartjs-chart.chartjs-chart -->
                     </div>
@@ -336,7 +336,8 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                 },
                 title: {
                     display: true,
-                    text: 'Diseases Search Trends Around the World',
+                    text: 'Search Trends Around the World',
+                    fontSize: 16
                 },
                 responsive: true,
                 legend : {
@@ -374,7 +375,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                     borderColor: window.chartColors.green,
                     data: dataCovid2020,
                 }, ],
-                labels: ["January", "Febuary", "March", "April", "May", "June"],
+                labels: ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "November", "December"],
             },
             options: {
                 scales: {
@@ -395,7 +396,8 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                 },
                 title: {
                     display: true,
-                    text: 'Search Trend Frequency of Covid in 2020',
+                    text: 'Coronavirus Search Trend',
+                    fontSize: 16
                 },
                 responsive: true,
                 legend : {
@@ -453,6 +455,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                 title: {
                     display: true,
                     text: 'Number of Patients by Age',
+                    fontSize: 16
                 },
                 responsive: true,
                 legend : {
@@ -500,6 +503,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                 title: {
                     display: true,
                     text: 'Number of Patients by Gender',
+                    fontSize: 16
                 },
                 responsive: true,
                 legend : {
@@ -547,6 +551,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                 title: {
                     display: true,
                     text: 'State of Patients',
+                    fontSize: 16
                 },
                 responsive: true,
                 legend : {
