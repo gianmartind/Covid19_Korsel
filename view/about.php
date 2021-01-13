@@ -35,7 +35,7 @@
 
 <body>
     <!-- Main Wrapper -->
-    <main class="wrapper" id="aboutcovid19">
+    <main class="wrapper">
         <!-- Header -->
         <header class="header">
             <div class="header-fixed">
@@ -68,7 +68,7 @@
                                         </ul>
                                     </li>    
                                     <li>
-                                        <a href="#aboutcovid19">About COVID-19</a>
+                                        <a href="about">About COVID-19</a>
                                     </li>                              
                                 </ul>
                                 <!-- End Nav -->

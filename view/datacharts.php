@@ -360,7 +360,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
     $index = 0;
     echo "<script>";
     foreach ($result2 as $key => $row) {
-        echo "dataCovid2020[" . $index . "]=" . $row['avgcovid'] . ";";
+        echo "dataCovid2020[" . ($row['month'] - 1) . "]=" . $row['avgcovid'] . ";";
         $index++;
     }
     echo "</script>";
@@ -375,7 +375,7 @@ $db = new MySQLDB("localhost", "root", "", "testcsv");
                     borderColor: window.chartColors.green,
                     data: dataCovid2020,
                 }, ],
-                labels: ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "November", "December"],
+                labels: ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
             },
             options: {
                 scales: {

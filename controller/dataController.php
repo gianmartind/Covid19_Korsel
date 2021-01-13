@@ -96,7 +96,7 @@ class DataController
 
     public function chart2()
     {
-        $query  = "SELECT MONTH(date),AVG(coronavirus) as 'avgcovid'
+        $query  = "SELECT MONTH(date) as 'month',AVG(coronavirus) as 'avgcovid'
             FROM searchtrend 
             WHERE YEAR(date) = 2020
             GROUP BY YEAR(date),MONTH(date)";
